@@ -2,10 +2,13 @@ import NavBar from "./navbar";
 
 function Main(){
     return(
-        <div>
-            <NavBar/>
-            Main
+        <>
+        <NavBar/>
+        <div id="main">
+            
+            
         </div>
+        </>
     )
 }
 export default Main;

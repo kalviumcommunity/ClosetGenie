@@ -69,6 +69,10 @@ font-weight: bold;
   width: 20vw;
 
 }
+#main{
+  background-color: black;
+  height: 100vh;
+}
 @media screen and (max-width:500px) {
   #home_svg{
     /* height: 40vh; */
@@ -81,5 +85,19 @@ font-weight: bold;
     width: 57vw;
     display: flex;
     justify-content: space-around;
+  }
+  #black{
+    margin-top: 80%;
+    margin-left: 17%;
+    width: 32vw;
+  }
+  #welcome2{
+    font-size: x-large;
+    margin-top: 85%;
+  }
+}
+@media screen and (max-width:322px){
+  #hamburger{
+    margin-top: 10%;
   }
 }
