@@ -1,8 +1,7 @@
 import React from "react";
 import logo from "./resources/a2.png"
-import Homenav from "./homenav";
+import Homenav from "./components/homenav";
 import { Link } from "react-router-dom";
-// import NavBar from "./navbar";
 function Home(){
     return(
         <div id="home">

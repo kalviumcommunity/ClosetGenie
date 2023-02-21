@@ -1,8 +1,8 @@
 import './App.css';
 import {BrowserRouter as Router,Route, Routes} from 'react-router-dom';
 import Home from './home';
-import About from './aboutus';
-import Contact from './contactus';
+import About from './components/aboutus';
+import Contact from './components/contactus';
 import Main from './homeMain';
 function App() {
   return (
