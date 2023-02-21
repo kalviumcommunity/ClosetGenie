@@ -4,8 +4,6 @@ import Home from './home';
 import About from './aboutus';
 import Contact from './contactus';
 import Main from './homeMain';
-// import NavBar from './navbar';
-// import NavBar from './navbar';
 function App() {
   return (
     <div>
