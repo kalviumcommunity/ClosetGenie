@@ -3,10 +3,10 @@ import { Quotes } from "../data/quotes";
 
 function Carousels() {
     const [count, setCount] = useState(0)
-    const length = Quotes.length - 1
+     
     useEffect(() => {
         const interval = setInterval(() => {
-            if(count === length) {
+            if(count === Quotes.length - 1) {
                 setCount(0)
             } else {
                 setCount(count => count + 1)
