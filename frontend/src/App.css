@@ -72,15 +72,16 @@ font-weight: bold;
 #main{
   background-color: black;
   height: 100vh;
+  overflow-y:scroll;
 }
 #car{
   background-color: white;
- 
+ margin-top: 5%;
 }
 #quotes{
   font-family:'Libre Baskerville', serif ;
   display: flex;
-  font-size: 150%;
+  font-size: 1.3rem;
   justify-content: left;
   padding-top: 3%;
   padding-left: 4%;
@@ -96,6 +97,64 @@ font-weight: bold;
   padding-bottom: 2%;
 
 }
+#heading{
+  color: white;
+  margin-top: 5%;
+  margin-bottom: 7%;
+  padding-left: 4%;
+  font-size: x-large;
+
+
+}
+/* #pre{
+  max-height: fit-content;
+} */
+.material-symbols-outlined {
+  color: white;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 5,
+  'opsz' 70
+}
+.line{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* max-height: fit-content; */
+  height: 20vh;
+  /* background-color: black; */
+}
+
+.image{
+   width: 20vw;
+   height: 40vh;
+   margin-left: 8%;
+}
+
+.image img{
+  object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  max-height: 100%
+}
+.link{
+  width: 20%;
+}
+.link img{
+  object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  max-height: 100%
+}
+/* #next{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}  */
 @media screen and (max-width:500px) {
   #home_svg{
     /* height: 40vh; */
