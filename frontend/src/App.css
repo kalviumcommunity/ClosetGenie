@@ -1,30 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
-#home{
+
+#home {
   display: flex;
   flex-direction: row;
 }
-#right{
+
+#right {
   width: 50vw;
 }
+
 #home_svg {
   width: 80%;
   margin-left: 7%;
 }
-#space{
+
+#space {
   display: flex;
-  justify-content:space-around ;
+  justify-content: space-around;
   font-family: 'Questrial', sans-serif;
 }
-#left{
-  display:flex;
+
+#left {
+  display: flex;
   align-items: center;
   background-color: black;
   width: 50vw;
   height: 100vh;
 }
 
-#flex{
+#flex {
   background-color: black;
   padding-top: 3%;
   display: flex;
@@ -32,36 +37,42 @@
   justify-content: space-around;
   align-items: center;
 }
-.center2{
+
+.center2 {
   text-decoration: none;
   font-family: 'Questrial', sans-serif;
-  color:black;
+  color: black;
   font-size: larger;
 }
-.center{
+
+.center {
   text-decoration: none;
   font-family: 'Questrial', sans-serif;
   color: white;
   font-size: larger;
 }
-#welcome{
-  
- margin-top: 35%;  
- margin-left: 7%;
+
+#welcome {
+
+  margin-top: 35%;
+  margin-left: 7%;
 }
-#welcome2{
-font-family: 'Libre Baskerville', serif;
-font-size:xx-large;
-font-weight: bold;
+
+#welcome2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: xx-large;
+  font-weight: bold;
   margin-bottom: 7%;
 }
-#lorem{
+
+#lorem {
   font-family: 'Questrial', sans-serif;
 }
-#black{
+
+#black {
   background-color: black;
   margin-left: 7%;
-  font-family:'Questrial', sans-serif; 
+  font-family: 'Questrial', sans-serif;
   color: white;
   margin-top: 15%;
   margin-left: 27%;
@@ -69,24 +80,28 @@ font-weight: bold;
   width: 20vw;
 
 }
-#main{
+
+#main {
   background-color: black;
   height: 100vh;
-  overflow-y:scroll;
+  overflow-y: scroll;
 }
-#car{
+
+#car {
   background-color: white;
- margin-top: 5%;
+  margin-top: 5%;
 }
-#quotes{
-  font-family:'Libre Baskerville', serif ;
+
+#quotes {
+  font-family: 'Libre Baskerville', serif;
   display: flex;
   font-size: 1.3rem;
   justify-content: left;
   padding-top: 3%;
   padding-left: 4%;
 }
-#author{
+
+#author {
   font-family: 'Questrial', sans-serif;
   font-size: 130%;
   display: flex;
@@ -97,7 +112,8 @@ font-weight: bold;
   padding-bottom: 2%;
 
 }
-#heading{
+
+#heading {
   color: white;
   margin-top: 5%;
   margin-bottom: 7%;
@@ -106,18 +122,21 @@ font-weight: bold;
 
 
 }
+
+
 /* #pre{
   max-height: fit-content;
 } */
 .material-symbols-outlined {
   color: white;
   font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 5,
-  'opsz' 70
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 5,
+    'opsz' 70
 }
-.line{
+
+.line {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -126,60 +145,267 @@ font-weight: bold;
   /* background-color: black; */
 }
 
-.image{
-   width: 20vw;
-   height: 40vh;
-   margin-left: 8%;
+.image {
+  width: 20vw;
+  height: 40vh;
+  margin-left: 8%;
 }
 
-.image img{
-  object-fit: cover;
+.image img {
+  object-fit: fill;
   min-width: 100%;
   min-height: 100%;
   max-width: 100%;
   max-height: 100%
 }
-.link{
+
+.link {
   width: 20%;
 }
-.link img{
+
+.link img {
   object-fit: cover;
   min-width: 100%;
   min-height: 100%;
   max-width: 100%;
   max-height: 100%
 }
+
 /* #next{
   display: flex;
   justify-content: flex-end;
   align-items: center;
   height: 100%;
 }  */
+#font {
+  color: white;
+  margin-top: 10%;
+  padding-left: 4%;
+  font-size: x-large;
+
+}
+
+#combo-box-demo {
+  background-color: white;
+  border-radius: 10px;
+}
+
+#column {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#pairing {
+  background-color: white;
+  color: black;
+  border-radius: 100%;
+  width: 3vw;
+  height: 5vh;
+  margin-right: 5.5%;
+}
+
+#middle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 4%;
+  margin-right: 10%;
+
+}
+
+#men,
+#women {
+  color: white;
+
+}
+
+#men {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 4%;
+
+}
+
+#women {
+  margin-bottom: 4%;
+}
+
+#menCategory {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#womenCategory {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap
+}
+
+#lefty {
+  width: 40vw;
+}
+
+#righty {
+  width: 40vw
+}
+
+#small {
+  width: 5vw;
+}
+
+.tops {
+  width: fit-content;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: medium;
+  margin-top: 10%;
+}
+
+#womenCategory {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+#menCategory{
+      display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  
+}
+
+/* .block {
+  grid-column: 1;
+} */
+.tops img {
+  object-fit: cover;
+  max-height: 20vh;
+  max-width: 10vw;
+  min-width: 10vw;
+  min-height: 20vh;
+}
+.shirt{
+  width: fit-content;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: medium;
+  margin-top: 10%;
+}
+.shirt img {
+  object-fit: cover;
+  max-height: 20vh;
+  max-width: 10vw;
+  min-width: 10vw;
+  min-height: 20vh;
+}
+#outerModal{
+  background-color: rgba(255, 255, 255, 0.621);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  /* padding-top: 5%;
+  padding-bottom: 5%; */
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+#innerModal{
+  overflow: auto;
+  color:black ;
+  width: 80vw;
+  height: 80vh;
+  background-color: #f5f5f5;
+  display:flex;
+  flex-direction: column;
+ 
+}
+.modalWidth{
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  margin-right: 2%;
+  margin-left: 2%;
+  margin-bottom: 2%;
+}
+#colorarrange{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+
+}
+#colorflex{
+  display: flex;
+  margin-bottom: 7%;
+  justify-content: space-between;
+  margin-left: 4%;
+  margin-right: 3%;
+  margin-top: 3%;
+}
+#imgend{
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+#enddiv{
+  width: 20%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-family:'Libre Baskerville', serif;
+  text-align: center;
+  font-size: larger;
+}
+#end{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 @media screen and (max-width:500px) {
-  #home_svg{
+  #home_svg {
     /* height: 40vh; */
     width: 40vw;
   }
-  .center2{
-    font-size:small;
+
+  .center2 {
+    font-size: small;
   }
-  #space{
+
+  #space {
     width: 57vw;
     display: flex;
     justify-content: space-around;
   }
-  #black{
+
+  #black {
     margin-top: 80%;
     margin-left: 17%;
     width: 32vw;
   }
-  #welcome2{
+
+  #welcome2 {
     font-size: x-large;
     margin-top: 85%;
   }
 }
-@media screen and (max-width:322px){
-  #hamburger{
+
+@media screen and (max-width:322px) {
+  #hamburger {
     margin-top: 10%;
   }
 }
