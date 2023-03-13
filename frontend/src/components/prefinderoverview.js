@@ -15,7 +15,18 @@ function OverviewPrefinder(){
     }, [index]);
 
 
-
+    const indexChange=()=>{
+        updateIndex(index=>index+1)
+        setLink1(black)
+        setLink2(black)
+        setLink3(black)
+    }
+    const revert=()=>{
+        
+        setLink1(black)
+        setLink2(black)
+        setLink3(black)
+    }
     const color1=()=> {
         if(link1===red){
             setLink1(black)
@@ -44,7 +55,7 @@ function OverviewPrefinder(){
         <div id="pre">
             <div id="heading">prefinded</div>
             <div className='line'>
-                <div id="prev" onClick={()=>updateIndex(index=>index-1)}><span className="material-symbols-outlined">
+                <div id="prev" onClick={revert}><span className="material-symbols-outlined">
                                     arrow_back_ios
                                 </span>
                 </div>
@@ -62,7 +73,7 @@ function OverviewPrefinder(){
                         <div className="link" onClick={color3}><img src={link3}/></div>
                     </div>
                 </div>
-                <div id="next" onClick={()=>updateIndex(index=>index+1)}>
+                <div id="next" onClick={indexChange}>
                     <span className="material-symbols-outlined">
                          arrow_forward_ios
                     </span>
