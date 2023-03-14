@@ -61,16 +61,16 @@ function OverviewPrefinder(){
                 </div>
                 <div className="line" >
                     <div className="image">
-                        <img  src={Images[index].img}/>
-                        <div className="link" onClick={color1}><img src={link1}/></div>
+                        <img  src={Images[index].img} alt="slide" />
+                        <div className="link" onClick={color1}><img src={link1} alt="change" /></div>
                     </div>
                     <div className="image">
-                        <img  src={Images[index+1].img}/>
-                        <div className="link" onClick={color2}><img src={link2}/></div>
+                        <img  src={Images[index+1].img} alt="slide2" />
+                        <div className="link" onClick={color2}><img src={link2} alt="change2" /></div>
                     </div>
                     <div className="image">
-                        <img src={Images[index+2].img}/>
-                        <div className="link" onClick={color3}><img src={link3}/></div>
+                        <img src={Images[index+2].img} alt="slide3" />
+                        <div className="link" onClick={color3}><img src={link3} alt="change3" /></div>
                     </div>
                 </div>
                 <div id="next" onClick={indexChange}>

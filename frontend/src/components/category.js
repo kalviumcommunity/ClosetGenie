@@ -4,7 +4,7 @@ import SendIcon from '@mui/icons-material/Send';
 import Men from "./men's"
 import Button from '@mui/material/Button';
 import Women from "./women"
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { useState } from "react"
 function Category(){
 const[result,setResult]=useState([])
@@ -29,7 +29,7 @@ const handlePair=() => {
                         <Men result={result} setResult={setResult}/>
                     </div>
                 </div>
-                <div id="small"><img src={line}/></div>
+                <div id="small"><img src={line} alt="line" /></div>
                 <div id="righty">
                     <div id="women">Women's</div>
                     <div >
