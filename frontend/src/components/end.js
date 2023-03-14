@@ -13,7 +13,7 @@ function End(){
                     
                     <div  id="enddiv">
                         <div>{show.input}</div>
-                        <img id="imgend"  src={show.image}/>
+                        <img id="imgend"  src={show.image} alt="image" />
                         <div>{show.output}</div>
                     </div>
                 )

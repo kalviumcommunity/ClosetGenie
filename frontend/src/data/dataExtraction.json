@@ -1,0 +1,476 @@
+[
+    {
+        "input": "women's tops",
+        "inputColor": "red",
+        "inputCode": "#FF0000",
+        "output": "women's jeans",
+        "outputColor": "black",
+        "outputCode": "#000000"
+    },
+    {
+        "input": "women's T-shirt",
+        "inputColor": "White",
+        "inputCode": "#FFFFFF",
+        "output": "women's short",
+        "outputColor": "Black",
+        "outputCode": "#000000"
+    },
+    {
+        "input": "women's T-shirt",
+        "inputColor": "Tan",
+        "inputCode": "#D2B48C",
+        "output": "women's jeans",
+        "outputColor": "Black",
+        "outputCode": "#000000",
+        "image": "greyblackjeans.png"
+    },
+    {
+        "input": "women's sweatshirt",
+        "inputColor": "Hunter gtreen",
+        "inputCode": "#355E3B",
+        "output": "women's jeans",
+        "outputColor": "White",
+        "outputCode": "#FFFFFF"
+    },
+    {
+        "input": "women's tops",
+        "inputColor": "White",
+        "inputCode": "#FFFFFF",
+        "output": "women's jeans",
+        "outputColor": "denim",
+        "outputCode": "#6F8FAF",
+        "image": "whitebluejeans.jpg"
+    },
+    {
+        "input": "women's sweaters",
+        "inputColor": "grey",
+        "inputCode": "#808080",
+        "output": "women's jeans",
+        "outputColor": "Black",
+        "outputCode": "#000000",
+        "image": "greyblackjeans.png"
+    },
+    {
+        "input": "women's shirt",
+        "inputColor": "White",
+        "inputCode": "#FFFFFF",
+        "output": "skirts",
+        "outputColor": "green",
+        "outputCode": "#00FF00",
+        "image": "whitegreenshort.jpg"
+    },
+    {
+        "input": "women's shirt",
+        "inputColor": "White",
+        "inputCode": "#FFFFFF",
+        "output": "women's jeans",
+        "outputColor": "denim",
+        "outputCode": "#6F8FAF",
+        "image": "whitedenimjeans.jpg"
+    },
+    {
+        "input": "women's T-shirt",
+        "inputColor": "Black",
+        "inputCode": "#000000",
+        "output": "skirts",
+        "outputColor": "white",
+        "outputCode": "#FFFFFF",
+        "pattern": "whiteblack printed",
+        "image": "blackblackwhiteskirt.jpg"
+    },
+    {
+        "input": "women's T-shirt",
+        "inputColor": "White",
+        "inputCode": "#FFFFFF",
+        "output": "women's trouser",
+        "outputColor": "Tan",
+        "outputCode": "#D2B48C",
+        "image": "whitetantrouser.jpg"
+    },
+    {
+        "input": "women's tops",
+        "inputColor": "Black",
+        "inputCode": "#000000",
+        "output": "skirts",
+        "outputColor": "Black",
+        "outputCode": "#000000",
+        "image": "blazerblackskirt.jpg"
+    },
+    {
+        "input": "women's blazer",
+        "inputColor": "Black",
+        "inputCode": "#000000",
+        "output": "skirts",
+        "outputColor": "Black",
+        "outputCode": "#000000",
+        "image": "blazerblackskirt.jpg"
+    },
+    {
+        "input": "women's sweaters",
+        "inputColor": "sage green",
+        "inputCode": "#c7ddb5",
+        "output": "women's trouser",
+        "outputColor": "Bubblegum",
+        "outputCode": "#FFC1CC",
+        "image": "sagegreenbubblegumtrouser.jpg"
+    },
+    {
+        "input": "women's tops",
+        "inputColor": "Black",
+        "inputCode": "#000000",
+        "output": "women's short",
+        "outputColor": "denim22",
+        "pattern": "denim",
+        "image": "blacktopdenimshorts.jpg"
+    },
+    {
+        "input": "women's tops",
+        "inputColor": "Rosewood",
+        "inputCode": "#9E4244",
+        "output": "skirts",
+        "outputColor": "black",
+        "outputCode": "#000000",
+        "image": "rosewoodblackskirt.jpg"
+    },
+    {
+        "input": "women's coat",
+        "inputColor": "grey",
+        "inputCode": "#808080",
+        "output": "women's tops",
+        "outputColor": "white",
+        "outputCode": "#FFFFFF",
+        "image": "greywhitecoat.jpg"
+    },
+    {
+        "input": "women's blazer",
+        "inputColor": "Pine",
+        "inputCode": "#234F1E",
+        "output": "women's trouser",
+        "outputColor": "Pine",
+        "outputCode": "#234F1E",
+        "image": "pinepineblazer.jpg"
+    },
+    {
+        "input": "women's tops",
+        "inputColor": "White",
+        "inputCode": "#FFFFFF",
+        "output": "women's jeans",
+        "outputColor": "denim",
+        "outputCode": "#6F8FAF",
+        "image": "whitetopbluejeans.jpg"
+    },
+    {
+        "input": "women's tops",
+        "inputColor": "White",
+        "inputCode": "#FFFFFF",
+        "output": "women's short",
+        "outputColor": "Lemonade",
+        "outputCode": "#FCBACB",
+        "image": "whitelemonadeshort.jpg"
+    },
+    {
+        "input": "women's blazer",
+        "inputColor": "Lightgrassgreen",
+        "inputCode": "#ccff90",
+        "output": "women's tops",
+        "outputColor": "White",
+        "outputCode": "#FFFFFF",
+        "image": "lightgrassgreenblazer.jpg"
+    },
+    {
+        "input": "women's tops",
+        "inputColor": "Teagreen",
+        "inputCode": "#D0F0C0",
+        "output": "skirts",
+        "outputColor": "sage green",
+        "outputCode": "#c7ddb5",
+        "image": "teagreensagegreenskirts.jpg"
+    },
+    {
+        "input": "women's tops",
+        "inputColor": "White",
+        "inputCode": "#FFFFFF",
+        "output": "women's jeans",
+        "outputColor": "Black",
+        "outputCode": "#000000",
+        "image": "whiteblackjeanstop.jpg"
+    },
+    {
+        "input": "women's sweaters",
+        "inputColor": "violet",
+        "inputCode": "#710193",
+        "output": "women's trouser",
+        "outputColor": "orange",
+        "outputCode": "#FFA500",
+        "image": "violetorangetrouser.jpg"
+    },
+    {
+        "input": "women's jacket",
+        "inputColor": "Chocolatate brown",
+        "inputCode": "#7B3F00",
+        "output": "women's jeans",
+        "outputColor": "Black",
+        "outputCode": "#000000",
+        "image": "brownblackjacket.jpg"
+    },
+    {
+        "input": "women's sweaters",
+        "inputColor": "White",
+        "inputCode": "#FFFFFF",
+        "output": "skirts",
+        "outputColor": "White",
+        "outputCode": "#FFFFFF",
+        "image": "whitewhiteskirt.jpg"
+    },
+    {
+        "input": "women's T-shirt",
+        "inputColor": "Dark sage green",
+        "inputCode": "#4e6c3e",
+        "output": "women's jeans",
+        "outputColor": "Black",
+        "outputCode": "#000000",
+        "image": "darksagegreenblackjeans.jpg"
+    },
+    {
+        "input": "women's sweaters",
+        "inputColor": "White",
+        "inputCode": "#FFFFFF",
+        "output": "skirts",
+        "outputColor": "Red",
+        "outputCode": "#FF0000",
+        "image": "whiteredskirt.jpg"
+    },
+    {
+        "input": "sarees",
+        "inputColor": "Red",
+        "inputCode": "#FF0000",
+        "output": "Blouse",
+        "outputColor": "Red",
+        "outputCode": "#FF0000",
+        "image": "redredsaree.jpg"
+    },
+    {
+        "input": "sarees",
+        "inputColor": "Bubblegum",
+        "inputCode": "#FFC1CC",
+        "output": "blouse",
+        "outputColor": "Blue some",
+        "outputCode": "#AED3E3",
+        "image": "bubblegumbluesomesaree.jpg"
+    },
+    {
+        "input": "sarees",
+        "inputColor": "White",
+        "inputCode": "#FFFFFF",
+        "output": "blouse",
+        "outputColor": "Bubblegum",
+        "outputCode": "#FFC1CC",
+        "image": "whitebubblegumsaree.jpg"
+    },
+    {
+        "input": "sarees",
+        "inputColor": "White",
+        "inputCode": "#FFFFFF",
+        "output": "blouse",
+        "outputColor": "Hunter green",
+        "outputCode": "#355E3B",
+        "image": "whitehuntergreensaree.jpg"
+    },
+    {
+        "input": "sarees",
+        "inputColor": "Copper gold",
+        "inputCode": "#C99A87",
+        "output": "blouse",
+        "outputColor": "Black",
+        "outputCode": "#000000",
+        "image": "coppergoldblacksaree.jpg"
+    },
+    {
+        "input": "sarees",
+        "inputColor": "Yellow green",
+        "inputCode": "#e0feb2",
+        "output": "blouse",
+        "outputColor": "Flamingo",
+        "outputCode": "#FC8EAC",
+        "image": "yellowgreenflamingosaree.jpg"
+    },
+    {
+        "input": "sarees",
+        "inputColor": "Dark blue",
+        "inputCode": "#000080",
+        "output": "blouse",
+        "outputColor": "white",
+        "outputCode": "#FFFFFF",
+        "image": "darkbluewhitesaree.png"
+    },
+    {
+        "input": "sarees",
+        "inputColor": "Golden yellow",
+        "inputCode": "#FFC000",
+        "output": "blouse",
+        "outputColor": "Rose pink",
+        "image": "goldenyellowrosepinksaree.jpg"
+    },
+    {
+        "input": "sarees",
+        "inputColor": "Black",
+        "inputCode": "#000000",
+        "output": "blouse",
+        "outputColor": "Red",
+        "outputCode": "#FF0000",
+        "image": "blackredsaree.jpg"
+    },
+    {
+        "input": "shrugs",
+        "inputColor": "Dark blue",
+        "inputCode": "#000080",
+        "output": "women's tops",
+        "outputColor": "White",
+        "outputCode": "#FFFFFF",
+        "image": "bluewhiteshrug.jpg"
+    },
+    {
+        "input": "shrugs",
+        "inputColor": "Black",
+        "inputCode": "#000000",
+        "output": "plazzo",
+        "outputColor": "Black",
+        "outputCode": "#000000",
+        "image": "blackblackshrug.jpg"
+    },
+    {
+        "input": "shrugs",
+        "inputColor": "Red",
+        "inputCode": "#FF0000",
+        "output": "plazzo",
+        "outputColor": "White",
+        "outputCode": "#FFFFFF",
+        "image": "redwhiteshrug.jpg"
+    },
+    {
+        "input": "shrugs",
+        "inputColor": "pinksome",
+        "inputCode": "#DAB7A3",
+        "output": "women's short",
+        "outputColor": "denim",
+        "outputCode": "#6F8FAF",
+        "image": "pinkdenimshorts.jpg"
+    },
+    {
+        "input": "shrugs",
+        "inputColor": "Black",
+        "inputCode": "#000000",
+        "output": "dresses",
+        "outputColor": "Black",
+        "outputCode": "#000000",
+        "image": "blackblackdress.jpg"
+    },
+    {
+        "input": "women's kurtas",
+        "inputColor": "White",
+        "inputCode": "#FFFFFF",
+        "output": "women's jeans",
+        "outputColor": "denim",
+        "outputCode": "#6F8FAF",
+        "image": "whitebluekurta.jpg"
+    },
+    {
+        "input": "women's kurtas",
+        "inputColor": "Rose pink",
+        "inputCode": "#FF007F",
+        "output": "plazzo",
+        "outputColor": "Rose pink",
+        "outputCode": "#FF007F",
+        "image": "rosepinkrosepinkkurta.jpg"
+    },
+    {
+        "input": "shirt casual",
+        "inputColor": "Sage",
+        "inputCode": "#728C69",
+        "output": "men's T-shirt",
+        "outputColor": "White",
+        "outputCode": "#FFFFFF",
+        "image": "sagewhiteshirt.jpg"
+    },
+    {
+        "input": "jacket",
+        "inputColor": "Denim",
+        "inputCode": "#6F8FAF",
+        "output": "men's T-shirt",
+        "outputColor": "White",
+        "outputCode": "#FFFFFF",
+        "image": "denimwhitejacket.jpg"
+    },
+    {
+        "input": "jacket",
+        "inputColor": "Mocha",
+        "inputCode": "#3C280D",
+        "output": "men's T-shirt",
+        "outputColor": "Tortilla",
+        "outputCode": "#9A7B4F",
+        "image": "browntortillajacket.jpg"
+    },
+    {
+        "input": "men's T-shirt",
+        "inputColor": "Pine",
+        "inputCode": "#234F1E",
+        "output": "shorts",
+        "outputColor": "Lightgrey",
+        "outputCode": "#EBECF0",
+        "image": "pineLightgreyshorts.jpg"
+    },
+    {
+        "input": "shirt formal",
+        "inputColor": "white",
+        "inputCode": "#FFFFFF",
+        "output": "Trouser formal",
+        "outputCode": "#a08679",
+        "outputColor": "lightbrown",
+        "image": "whitelightbrowntrouser.jpg"
+    },
+    {
+        "input": "men's T-shirt",
+        "inputColor": "dark off white",
+        "inputCode": "#EBE8E2",
+        "output": "Trouser casual",
+        "outputColor": "dark denim",
+        "outputCode": "#151E3D",
+        "image": "darkoffwhitebluetrouser.jpg"
+    },
+    {
+        "input": "Sweatshirt",
+        "inputColor": "Salmon",
+        "inputCode": "#FF9999",
+        "output": "Jeans",
+        "outputColor": "denim",
+        "outputCode": "#6F8FAF",
+        "image": "salmondenimjeans.jpg"
+    },
+    {
+        "input": "blazer",
+        "inputColor": "dark denim",
+        "inputCode": "#151E3D",
+        "output": "Trouser formal",
+        "outputColor": "light brown",
+        "outputCode": "#a08679",
+        "image": "darkdenimlightbrownblazer.jpg"
+    },
+    {
+        "input": "coat",
+        "inputColor": "Tawny",
+        "inputCode": "#80471C",
+        "output": "Jeans",
+        "outputColor": "black",
+        "outputCode": "#000000",
+        "image": "tawnyblackcoat.jpg"
+    },
+    {
+        "input": "trackpant and jogger",
+        "inputColor": "Black",
+        "inputCode": "#000000",
+        "output": "men's T-shirt",
+        "outputColor": "Black",
+        "outputCode": "#000000",
+        "image": "blackblacksweatpants.jpg"
+    }
+]

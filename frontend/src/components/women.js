@@ -9,7 +9,6 @@ function Women({result,setResult}){
     const[categoryWomen,updateWomen]=useState("")
     const[color,updatecolor]=useState("")
     const [favorableArray,updateFavorablearray]=useState([])
-    const [favorableColor,updatefavorablearraycolor]=useState([])
     const ModalOpen=({favorableArray})=>{
        
            
@@ -39,9 +38,23 @@ function Women({result,setResult}){
         const updateCategory=(e)=>{
             updateWomen(e.target.alt)
             updateFlag(true)
+            const inputOcc = {};
+            const outputOcc = {};
             updateFavorablearray(Ans.filter((out)=>{
-                return out.input==e.target.alt || out.output==e.target.alt
+                let colorIn = out.inputCode;
+                let colorOut = out.outputCode;
+                
+                if(out.output==e.target.alt){
+                    if (outputOcc[colorOut]) outputOcc[colorOut]++;
+                    else outputOcc[colorOut] = 1;
+                }
+                if(out.input==e.target.alt){
+                    if (inputOcc[colorIn]) inputOcc[colorIn]++;
+                else inputOcc[colorIn] = 1;
+                }                
+                return (out.input==e.target.alt&&inputOcc[colorIn] == 1) || (out.output==e.target.alt&&outputOcc[colorOut] == 1)
             }))
+            console.log(inputOcc,outputOcc)
             console.log(favorableArray)
             // console.log(favorableArray)
             // console.log(favorableColor)
