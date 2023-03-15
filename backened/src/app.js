@@ -1,4 +1,5 @@
 const express =require("express");
+require('dotenv').config()
 var cors = require('cors')
 require("./db/conn")
 const Match = require("./modules/match");
