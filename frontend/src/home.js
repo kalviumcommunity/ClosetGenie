@@ -2,7 +2,19 @@ import React from "react";
 import logo from "./resources/a2.png"
 import Homenav from "./components/homenav";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import axios from "axios";
 function Home(){
+useEffect(()=>{
+    const baseURL=`${process.env.REACT_APP_API_URL}/match`
+    axios.get(baseURL)
+    .then((response)=>{
+        console.log(response.data)
+    }).catch((e)=>{
+        console.log(e,"error")
+    })
+
+})
     return(
         <div id="home">
            <div id="left"><img id="home_svg" src={logo} alt="logo"/></div>
