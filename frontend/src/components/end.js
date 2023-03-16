@@ -8,12 +8,12 @@ function End(){
        <div id="end">
         {
             location.state.map((show)=>{
-                console.log(show.image.whiteLemonadeshort)
+                // console.log(show.image.whiteLemonadeshort)
                 return(
                     
                     <div  id="enddiv">
                         <div>{show.input}</div>
-                        <img id="imgend"  src={show.image} alt="image" />
+                        <img id="imgend"  src={`http://localhost:3000/images/${show.image}`} alt="image" />
                         <div>{show.output}</div>
                     </div>
                 )
