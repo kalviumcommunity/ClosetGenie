@@ -22,7 +22,7 @@ app.get("/match",async(req,res)=>{
         let queryFinal2=`#${req.query.colorFinal}`
 
         // const matchData=await Match.find({ $or:[{input:queryFinal },{ output:queryFinal }]});
-        const matchData=await Match.find({ $and: [ {  $or:[{input:queryFinal },{ output:queryFinal }] }, { $or:[{inputCode:queryFinal2 },{ outputCode:queryFinal2 }] } ] })
+        const matchData=await Match.find({ $or: [ {  $and:[{input:queryFinal },{ inputCode:queryFinal2 }] }, { $and:[{output:queryFinal },{ outputCode:queryFinal2 }] } ] })
         res.send(matchData);
         
     }catch(e){

@@ -5,16 +5,14 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom"
 import close from "../resources/Close.svg"
 import {Ans }from "../data/outcome.js"
-function Women({result,setResult}){
+function Women(){
     const navigate=useNavigate()
     
     const[flag,updateFlag]=useState(false)
     const[categoryWomen,updateWomen]=useState("")
    
     const[color,updatecolor]=useState("")
-    const [favorableArray,updateFavorablearray]=useState([])
-    const ModalOpen=({favorableArray})=>{
-        const[result,setResult]=useState([])
+    const ModalOpen=()=>{
         const[colorAPI,updateColorAPI]=useState([])
         useEffect(()=>{
             const baseURL=`${process.env.REACT_APP_API_URL}/color?input=${categoryWomen}`
@@ -27,10 +25,8 @@ function Women({result,setResult}){
                 console.log(e,"error")
             })
             console.log({color})
-            
+            },[categoryWomen])
 
-        
-        },[categoryWomen])
         useEffect(()=>{
             const baseURL2=`${process.env.REACT_APP_API_URL}/match?category=${categoryWomen}&colorFinal=${color.slice(1)}`
             axios.get(baseURL2)
@@ -68,7 +64,6 @@ function Women({result,setResult}){
         const updateCategory=(e)=>{
             updateWomen(e.target.alt)
             updateFlag(true)
-            console.log(favorableArray)
             return(
                 console.log(categoryWomen)
                 
@@ -91,9 +86,8 @@ function Women({result,setResult}){
                    <img width="100vw" src={image.img} alt={image.title}/>
                 </div>
                )
-              
             })}
-           <ModalOpen favorableArray={favorableArray}/>
+           <ModalOpen/>
             
         </div>
     )

@@ -8,12 +8,13 @@ function End(){
        <div id="end">
         {
             location.state.map((show)=>{
+                console.log("hhhh",process.env.REACT_APP_IMAGE_URL)
                 // console.log(show.image.whiteLemonadeshort)
                 return(
                     
                     <div  id="enddiv">
                         <div>{show.input}</div>
-                        <img id="imgend"  src={`http://localhost:3000/images/${show.image}`} alt="image" />
+                        <img id="imgend"  src={`${process.env.REACT_APP_IMAGE_URL}/images/${show.image}`} alt="image" />
                         <div>{show.output}</div>
                     </div>
                 )

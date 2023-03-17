@@ -1,35 +1,67 @@
 import { MenData } from "../data/menData";
-import { useState } from "react";
+import { useState ,useEffect} from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom"
 import close from "../resources/Close.svg"
 import {Ans }from "../data/outcome.js"
-function Men({result,setResult}){
+function Men(){
+    const navigate=useNavigate()
+
     const[flag,updateFlag]=useState(false)
     const[categoryWomen,updateWomen]=useState("")
     const[color,updatecolor]=useState("")
-    const [favorableArray,updateFavorablearray]=useState([])
-    const ModalOpen=({favorableArray})=>{
-       
+
+    const ModalOpen=()=>{
+        const[colorAPI,updateColorAPI]=useState([])
            
+        useEffect(()=>{
+            const baseURL=`${process.env.REACT_APP_API_URL}/color?input=${categoryWomen}`
+            console.log(baseURL)
+            axios.get(baseURL)
+            .then((response)=>{
+                updateColorAPI(response.data)
+                console.log(response.data)
+            }).catch((e)=>{
+                console.log(e,"error")
+            })
+            console.log({color})
+            
+
+        
+        },[categoryWomen])
+        useEffect(()=>{
+            const baseURL2=`${process.env.REACT_APP_API_URL}/match?category=${categoryWomen}&colorFinal=${color.slice(1)}`
+            axios.get(baseURL2)
+            .then((res)=>{
+                if(!res.data||res.data.length===0)return
+                console.log("finsl result",res)
+                // setResult(res.data)
+                navigate("/outcome", { state: res.data })
+                
+            },[color])
+        }
+        )
+
         //    console.log(favorableColor)
             return(
                 
                 <div style={{display: (flag===true?"flex":"none")}} id="outerModal">
-                   <div id="innerModal">
-                    <div id="colorflex">colors
-                        <img onClick={()=>updateFlag(false)} width="40vw" src={close} alt=""/>
-                    </div>
-                    <div id="colorarrange">
-                    {favorableArray.map((color)=>{
-                        // console.log(color.)
-                        return(
-                            <div  className={`modalWidth ${color.outputColor}`} id={color.inputColor}  onClick={colorchange} style={{backgroundColor:(categoryWomen==color.input? color.inputCode:color.outputCode)}}></div>
-                        )
-                    })}
-                    
-                    </div>
-                    
-                   </div>
+                <div id="innerModal">
+                 <div id="colorflex">colors
+                     <img onClick={()=>updateFlag(false)} width="40vw" src={close} alt=""/>
+                 </div>
+                 <div id="colorarrange">
+                 {colorAPI.map((color)=>{
+                     // console.log(color.)
+                     return(
+                         <div  className={`modalWidth ${color.colorCode}`} id={color.colorCode}  onClick={colorchange} style={{backgroundColor:color.colorCode}}></div>
+                     )
+                 })}
+                 
+                 </div>
+                 
                 </div>
+             </div>
                
             )
                 }
@@ -37,13 +69,8 @@ function Men({result,setResult}){
 const updateCategory=(e)=>{
             updateWomen(e.target.alt)
             updateFlag(true)
-            updateFavorablearray(Ans.filter((out)=>{
-                return out.input==e.target.alt || out.output==e.target.alt
-            }))
-            console.log(favorableArray)
             // console.log(favorableArray)
             // console.log(favorableColor)
-            
             return(
                 console.log(categoryWomen)
                 
@@ -51,17 +78,6 @@ const updateCategory=(e)=>{
         }
         const colorchange=(e)=>{
             updatecolor(e.target.id)
-            updateFlag(false)
-            
-            console.log(e.target)
-            console.log(color)
-            setResult(Ans.filter((out)=>{
-
-                return ((out.input==categoryWomen && out.inputColor==e.target.id)||(out.output==categoryWomen && `modalWidth ${out.outputColor}`== e.target.className))
-                
-            })
-            )
-            console.log("hjghghg",result)
         }
        
         
@@ -77,7 +93,7 @@ const updateCategory=(e)=>{
                )
               
             })}
-           <ModalOpen favorableArray={favorableArray}/>
+           <ModalOpen/>
             
         </div>
     )
