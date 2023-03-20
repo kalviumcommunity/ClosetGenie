@@ -5,13 +5,13 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom"
 import close from "../resources/Close.svg"
 import {Ans }from "../data/outcome.js"
-function Women(){
+function Women({    categoryWomen , updateWomen,flag,updateFlag,color,updatecolor}){
     const navigate=useNavigate()
     
-    const[flag,updateFlag]=useState(false)
-    const[categoryWomen,updateWomen]=useState("")
+    
+    // const[categoryWomen,updateWomen]=useState("")
    
-    const[color,updatecolor]=useState("")
+    // const[color,updatecolor]=useState("")
     const ModalOpen=()=>{
         const[colorAPI,updateColorAPI]=useState([])
         useEffect(()=>{
