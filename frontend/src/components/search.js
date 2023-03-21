@@ -30,7 +30,7 @@ export default function ComboBox({ categoryWomen, updateWomen, flag, updateFlag 
   );
 }
 
-// Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
+
 const CategoryMenOrWomen = [
   {
     label: "men's T-shirt ",
