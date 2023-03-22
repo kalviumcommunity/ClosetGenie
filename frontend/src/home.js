@@ -2,7 +2,7 @@ import React from "react";
 import logo from "./resources/a2.png"
 import Homenav from "./components/homenav";
 import { Link } from "react-router-dom";
-
+import ResponsiveAppBar from "./components/homenav";
 
 function Home(){
 
@@ -10,7 +10,7 @@ function Home(){
         <div id="home">
            <div id="left"><img id="home_svg" src={logo} alt="logo"/></div>
            <div id="right">
-            <Homenav/>
+            <ResponsiveAppBar/>
             <div id="welcome">
                 <div id="welcome2" >Welcome</div>
                 <div id="lorem" className="center2">
