@@ -14,7 +14,7 @@ import jacket from "../resources/category/Jacket.jpg"
 import coat from "../resources/category/coat.jpg"
 import blazer from "../resources/category/blazer.jpg"
 // import  from "../resources/category/.jpg"
-
+import sweatshirt from "../resources/category/sweatshirt.jpg"
 
 
 
@@ -88,6 +88,10 @@ export const WomenData=[
         title:"women's kurtas",
         img:kurta
     },
+    {
+        title:"women's sweatshirts",
+        img:sweatshirt
+    }
 
 
 ]
