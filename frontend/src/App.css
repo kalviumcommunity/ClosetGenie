@@ -377,6 +377,20 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
+.css-19r6kue-MuiContainer-root{
+  background-color: black;
+  /* display: flex !important;
+  justify-content: space-around !important; */
+}
+.mui-nav{
+  justify-content: space-around;
+}
+@media screen and (max-width:893px){
+  .css-19r6kue-MuiContainer-root{
+    /* display: block !important; */
+    text-align: left;
+  }
+} 
 @media screen and (max-width:500px) {
   #home_svg {
     /* height: 40vh; */
