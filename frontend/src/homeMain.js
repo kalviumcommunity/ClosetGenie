@@ -5,7 +5,6 @@ import Category from "./components/category";
 function Main(){
     return(
         <div id="main">
-          Home Main  
          <NavBar/>
          <Carousels/>
          <OverviewPrefinder/>
