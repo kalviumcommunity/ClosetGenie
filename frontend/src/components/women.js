@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import axios from "axios";
 import { useNavigate } from "react-router-dom"
 import close from "../resources/Close.svg"
+import "./women.css"
 import {Ans }from "../data/outcome.js"
 function Women({    categoryWomen , updateWomen,flag,updateFlag,color,updatecolor}){
     const navigate=useNavigate()
