@@ -106,7 +106,7 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} ><img src="https://closetgenie.netlify.app/images/a2.png" alt="logo" style={{height:50}} /></Box>
+          <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} ><img src="https://closetgenie.netlify.app/a2.png" alt="logo" style={{height:50}} /></Box>
           {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
           <Typography
             variant="h5"
