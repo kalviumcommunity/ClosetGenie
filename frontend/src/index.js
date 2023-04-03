@@ -13,6 +13,8 @@ root.render(
     authorizationParams={{
       redirect_uri: window.location.href
     }}
+    useRefreshTokens={true}
+    cacheLocation='localstorage'
   > 
     <App />
 
