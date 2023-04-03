@@ -1,5 +1,5 @@
 import ComboBox from "./search"
-import line from "../resources/Line 1.svg"
+// import line from "../resources/Line 1.svg"
 import Men from "./men's"
 import Women from "./women"
 

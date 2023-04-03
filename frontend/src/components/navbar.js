@@ -12,14 +12,28 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { useState, useEffect } from 'react';
-import AdbIcon from '@mui/icons-material/Adb';
+import { useAuth0 } from '@auth0/auth0-react';
+import LoginButton from './login';
+import LogoutButton from './logout';
+// import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
 
+// console.log(isAuthenticated)
 const pages = [{title:'Your closet',source:"/"},{title:'About us',source:'/about'},{title:'Contact us',source:'/contact'} ];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
+
 
 function ResponsiveAppBar() {
   // const [size,updateSize]=React.useState("")
+  const { isAuthenticated, user } = useAuth0();
+  let settings
+  if(!isAuthenticated){
+    settings=[<LoginButton/>];
+  }
+  else{
+    settings = ['Profile', 'Account', 'Dashboard', <LogoutButton/>];
+  }
+  console.log(isAuthenticated)
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
