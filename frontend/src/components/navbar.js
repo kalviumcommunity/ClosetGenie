@@ -26,12 +26,16 @@ const pages = [{title:'Your closet',source:"/"},{title:'About us',source:'/about
 function ResponsiveAppBar() {
   // const [size,updateSize]=React.useState("")
   const { isAuthenticated, user } = useAuth0();
+  // console.log(user.picture)
   let settings
+  let photo
   if(!isAuthenticated){
     settings=[<LoginButton/>];
+    photo=<Avatar alt="Remy Sharp" src="/images/user.png" />;
   }
   else{
-    settings = ['Profile', 'Account', 'Dashboard', <LogoutButton/>];
+    settings = [`${user.name}`,'Dashboard', <LogoutButton/>];
+    photo= <img style={{width:"50px",borderRadius:"50px"}} src={user.picture} alt={user.name} />;
   }
   console.log(isAuthenticated)
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -151,11 +155,14 @@ function ResponsiveAppBar() {
               </Button>
             ))}
           </Box>
-
+          
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <Box onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/images/user.png" />
+                {/* {!isAuthenticated?<Avatar alt="Remy Sharp" src="/images/user.png" />:<img src={user.picture} alt={user.name} />} */}
+                {photo}
+                
+                
               </Box>
             </Tooltip>
             <Menu
