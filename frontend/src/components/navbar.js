@@ -12,14 +12,32 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { useState, useEffect } from 'react';
-import AdbIcon from '@mui/icons-material/Adb';
+import { useAuth0 } from '@auth0/auth0-react';
+import LoginButton from './login';
+import LogoutButton from './logout';
+// import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
 
+// console.log(isAuthenticated)
 const pages = [{title:'Your closet',source:"/"},{title:'About us',source:'/about'},{title:'Contact us',source:'/contact'} ];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
+
 
 function ResponsiveAppBar() {
   // const [size,updateSize]=React.useState("")
+  const { isAuthenticated, user } = useAuth0();
+  // console.log(user.picture)
+  let settings
+  let photo
+  if(!isAuthenticated){
+    settings=[<LoginButton/>];
+    photo=<Avatar alt="Remy Sharp" src="/images/user.png" />;
+  }
+  else{
+    settings = [`${user.name}`,'Dashboard', <LogoutButton/>];
+    photo= <img style={{width:"50px",borderRadius:"50px"}} src={user.picture} alt={user.name} />;
+  }
+  console.log(isAuthenticated)
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -137,11 +155,14 @@ function ResponsiveAppBar() {
               </Button>
             ))}
           </Box>
-
+          
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <Box onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/images/user.png" />
+                {/* {!isAuthenticated?<Avatar alt="Remy Sharp" src="/images/user.png" />:<img src={user.picture} alt={user.name} />} */}
+                {photo}
+                
+                
               </Box>
             </Tooltip>
             <Menu
