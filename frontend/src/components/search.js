@@ -3,9 +3,23 @@ import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import { Box } from '@mui/system';
 
-export default function ComboBox({ categoryWomen, updateWomen, flag, updateFlag }) {
+export default function ComboBox({ categoryWomen, updateWomen, flag, updateFlag , currWidth}) {
+  const [widthsize,updateWidthsize]=React.useState("")
+
+  React.useEffect(()=>{
+    if(currWidth>=539&&currWidth<600)
+    {
+      updateWidthsize("0.1w")
+    }
+    else if(currWidth<539&&currWidth>239){
+      updateWidthsize("10vw")
+    }
+  })
+
   return (
     <Autocomplete
+    className='dropdown'
+    style={{width:"200px"}}
       disablePortal
       id="combo-box-demo"
     onChange={(e,value)=>{
@@ -18,13 +32,13 @@ export default function ComboBox({ categoryWomen, updateWomen, flag, updateFlag 
       options={CategoryMenOrWomen}
       // inputValue={option=>option.label}
       renderOption={
-        (props, option) => <Box component="li" key={option.label}  style={{ display: "flex" }} {...props}>
+        (props, option) => <Box component="li" key={option.label}  style={{ display: "flex"}} {...props}>
           {console.log(option.label)}
           <div style={{ backgroundColor:(option.type==="M"?"#DFE9F5":"#eec4dc"),textAlign:"center",marginRight:"5%",width:"10%" }} >{option.type}</div>
           <div>{option.show}</div>
         </Box>}
       // getOptionLabel={option=>option.label}
-      sx={{ width: 300 }}
+      sx={{ width: 400 ,background:"white",borderRadius:"20px"}}
       renderInput={(params) => <TextField {...params} label="category" />}
     />
   );
