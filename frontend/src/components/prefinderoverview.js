@@ -3,11 +3,14 @@ import red from "../resources/like/Fire Heart.svg"
 import black from "../resources/like/Favorite.svg"
 import { useState,useEffect } from "react"
 import "./prefinder.css"
+import { useAuth0 } from "@auth0/auth0-react"
+import PleaseLogin from "./pleaseLogin"
 function OverviewPrefinder(){
     const [link1, setLink1] = useState(black)
     const [link2, setLink2] = useState(black)
     const [link3, setLink3] = useState(black)
     const [index,updateIndex]=useState(0)
+    const { isAuthenticated} = useAuth0();
     
     useEffect(() => {
             if(index+2 === Images.length - 1) {
@@ -36,12 +39,18 @@ function OverviewPrefinder(){
         setLink3(black)
     }
     const color1=()=> {
-        if(link1===red){
-            setLink1(black)
+        if(isAuthenticated){
+            if(link1===red){
+                setLink1(black)
+            }
+            else if(link1===black){
+                setLink1(red)
+            }
         }
-        else if(link1===black){
-            setLink1(red)
+        else{
+            <PleaseLogin/>
         }
+     
     }
     const color2=()=> {
         if(link2===red){
