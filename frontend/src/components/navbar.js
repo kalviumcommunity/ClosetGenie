@@ -29,13 +29,16 @@ function ResponsiveAppBar() {
   // console.log(user.picture)
   let settings
   let photo
+  let imageName
   if(!isAuthenticated){
     settings=[<LoginButton/>];
-    photo=<Avatar alt="Remy Sharp" src="/images/user.png" />;
+    photo="/images/user.png" ;
+    imageName="Guest"
   }
   else{
     settings = [`${user.name}`,'Dashboard', <LogoutButton/>];
-    photo= <img style={{width:"50px",borderRadius:"50px"}} src={user.picture} alt={user.name} />;
+    photo=`${user.picture} `;
+    imageName=`${user.name}`
   }
   console.log(isAuthenticated)
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -160,7 +163,7 @@ function ResponsiveAppBar() {
             <Tooltip title="Open settings">
               <Box onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 {/* {!isAuthenticated?<Avatar alt="Remy Sharp" src="/images/user.png" />:<img src={user.picture} alt={user.name} />} */}
-                {photo}
+                <Avatar alt={imageName} src={photo} />
                 
                 
               </Box>
