@@ -9,8 +9,9 @@ function OverviewPrefinder(){
     const [link1, setLink1] = useState(black)
     const [link2, setLink2] = useState(black)
     const [link3, setLink3] = useState(black)
-    const [index,updateIndex]=useState(0)
+    const [index,updateIndex]=useState(0);
     const { isAuthenticated} = useAuth0();
+    const [flag,updateFlag]=useState(false)
     
     useEffect(() => {
             if(index+2 === Images.length - 1) {
@@ -48,7 +49,8 @@ function OverviewPrefinder(){
             }
         }
         else{
-            <PleaseLogin/>
+            updateFlag(true)
+            
         }
      
     }
@@ -73,6 +75,7 @@ function OverviewPrefinder(){
         <div id="pre">
             <div id="heading">prefinded</div>
             <div className='line'>
+                <div style={{display:(flag===true?"block":"none"),backgroundColor:"red"}} >please log in </div>
                 <div id="prev" onClick={revert}><span className="material-symbols-outlined">
                                     arrow_back_ios
                                 </span>
