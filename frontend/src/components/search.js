@@ -33,7 +33,7 @@ export default function ComboBox({ categoryWomen, updateWomen, flag, updateFlag 
 
 const CategoryMenOrWomen = [
   {
-    label: "men's T-shirt ",
+    label: "men's T-shirt",
     show:"T-shirt",
     type: "M"
   },
