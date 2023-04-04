@@ -9,9 +9,8 @@ function OverviewPrefinder(){
     const [link1, setLink1] = useState(black)
     const [link2, setLink2] = useState(black)
     const [link3, setLink3] = useState(black)
-    const [index,updateIndex]=useState(0);
+    const [index,updateIndex]=useState(0)
     const { isAuthenticated} = useAuth0();
-    const [flag,updateFlag]=useState(false)
     
     useEffect(() => {
             if(index+2 === Images.length - 1) {
@@ -49,8 +48,7 @@ function OverviewPrefinder(){
             }
         }
         else{
-            updateFlag(true)
-            
+            <PleaseLogin/>
         }
      
     }

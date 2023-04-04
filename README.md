@@ -1,4 +1,6 @@
 # ClosetGenie
+live url: https://closetgenie.netlify.app/  
+
 Progress Tracking
 |Content|Status|PR Link|
 |-----|-----|------|
