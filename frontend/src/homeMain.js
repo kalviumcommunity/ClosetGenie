@@ -6,9 +6,9 @@ function Main(){
     return(
         <div id="main">
          <NavBar/>
-         <Carousels/>
-         <OverviewPrefinder/>
-         <Category/>
+         <Carousels />
+         <OverviewPrefinder />
+         <Category />
         </div>
     )
 }

@@ -28,7 +28,10 @@ const matchingSchema = new mongoose.Schema({
     image:{
         type:String,
         required:true
-    }
+    },
+    likedUser:[{
+        type:String
+    }]
 })
 const Match = new mongoose.model('Match',matchingSchema);
 module.exports=Match;

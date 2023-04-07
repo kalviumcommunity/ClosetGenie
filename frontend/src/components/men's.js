@@ -26,18 +26,18 @@ function Men({categoryWomen , updateWomen,flag,updateFlag,color,updatecolor}){
 
         
         },[categoryWomen])
-        useEffect(()=>{
-            const baseURL2=`${process.env.REACT_APP_API_URL}/match?category=${categoryWomen}&colorFinal=${color.slice(1)}`
-            axios.get(baseURL2)
-            .then((res)=>{
-                if(!res.data||res.data.length===0)return
-                console.log("finsl result",res)
-                // setResult(res.data)
-                navigate("/outcome", { state: res.data })
+        // useEffect(()=>{
+        //     const baseURL2=`${process.env.REACT_APP_API_URL}/match?category=${categoryWomen}&colorFinal=${color.slice(1)}`
+        //     axios.get(baseURL2)
+        //     .then((res)=>{
+        //         if(!res.data||res.data.length===0)return
+        //         console.log("finsl result",res)
+        //         // setResult(res.data)
+        //         // navigate("/outcome", { state: res.data })
                 
-            },[color])
-        }
-        )
+        //     },[color])
+        // }
+        // )
 
         //    console.log(favorableColor)
             return(

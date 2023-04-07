@@ -368,8 +368,12 @@
   min-height: 100%;
   object-fit: cover;
 }
-#enddiv{
+.enddiv{
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
   width: 20%;
+   min-width: 200px;
   margin-top: 5%;
   margin-bottom: 5%;
   margin-left: 5%;
