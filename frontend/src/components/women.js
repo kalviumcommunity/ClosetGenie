@@ -35,7 +35,7 @@ function Women({    categoryWomen , updateWomen,flag,updateFlag,color,updatecolo
                 if(!res.data||res.data.length===0)return
                 console.log("finsl result",res)
                 // setResult(res.data)
-                navigate("/outcome", { state: res.data })
+                navigate("/outcome", { state:res.data })
                 
             },[color])
         })
