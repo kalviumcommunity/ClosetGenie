@@ -82,10 +82,10 @@ app.get('/wishlist',async(req,res)=>{
 
 //     })
     // console.log(ans)
-    let wishlisted=body.filter((e)=>{
-        let result= e.likedUser.filter((a)=>{
+    let wishlisted=body.filter((elt)=>{
+        let result= elt.likedUser.filter((likedUserEmail)=>{
             
-                return a===userEmail
+                return LikedUserEmail===userEmail
             
         })
         return result.length>0
