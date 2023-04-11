@@ -71,6 +71,35 @@ app.post('/unlike',async(req,res)=>{
    })
    res.status(201).send("sucesss");     
 })
+app.get('/wishlist',async(req,res)=>{
+    let userEmail=req.query.email
+    let body=await Match.find({})
+    console.log(body)
+//    let ans= body.filter((e)=>{
+        
+//             return e.likedUser.length>0
+        
+
+//     })
+    // console.log(ans)
+    let wishlisted=body.filter((e)=>{
+        let result= e.likedUser.filter((a)=>{
+            
+                return a===userEmail
+            
+        })
+        return result.length>0
+    })
+    res.send(wishlisted)
+})
+app.post('/delete',async(req,res)=>{
+    let Body=req.body
+    const deleted= await Match.findOneAndUpdate({_id:Body.productId },{
+     $pull: { likedUser: Body.userID  }
+    })
+    res.status(201).send("sucesss");     
+ 
+})
 
 app.listen(port,()=>{
     console.log(`connection is at ${port}`)

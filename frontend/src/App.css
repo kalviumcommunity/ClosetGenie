@@ -373,10 +373,11 @@
   /* flex-wrap: wrap; */
   flex-direction: column;
   width: 20%;
-   min-width: 200px;
-  margin-top: 5%;
-  margin-bottom: 5%;
+   min-width: 206px;
+  margin-top: 10%;
+  margin-bottom: 10%;
   margin-left: 5%;
+  margin-right: 5%;
   font-family:'Libre Baskerville', serif;
   text-align: center;
   font-size: larger;

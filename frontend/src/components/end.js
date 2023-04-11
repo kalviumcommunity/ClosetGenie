@@ -11,13 +11,15 @@ import Navbar from"./navbar"
 function End(){
     const location = useLocation()
     // console.log(black);
-    console.log(location.state[0],"input")
+    console.log(location.state,"input")
     const [showConfetti, setShowConfetti] = useState(false);
     const [like,updateLike]=useState([])
     const { isAuthenticated, user } = useAuth0();
+    const [storedata,updateStoredata]=useState([]);
+    const[likedUser,updateLikedUser]=useState()
     useEffect(()=>{
         
-        location.state.map((show,i)=>{
+        storedata.map((show,i)=>{
             if(show.likedUser){
                 var a=show.likedUser.find((e)=>{
                     return e===user?.email
@@ -35,6 +37,19 @@ function End(){
         }
         })
       },[user])
+
+      useEffect(()=>{
+        
+        const baseURL2=`${process.env.REACT_APP_API_URL}/match?category=${location.state.category}&colorFinal=${location.state.colorFinal.slice(1)}`
+        axios.get(baseURL2)
+        .then((res)=>{
+            console.log("eeeeeeeeee")
+            // if(!res.data||res.data.length===0)return
+            console.log("fccccinsl result",res)
+            updateStoredata(res.data)
+            
+        })
+    },[location.state.colorFinal])
 //  useEffect(()=>{
 //             const baseURL3=`${process.env.REACT_APP_API_URL}/wishlist`
 //             axios.post(baseURL3)
@@ -89,6 +104,7 @@ function End(){
     //       }
     //       return newlike
     //   })
+    {console.log(storedata)}
         
     }
     useEffect(()=>{
@@ -100,8 +116,9 @@ function End(){
        <div id="end">
         <Navbar/>
         {showConfetti && <Confetti />}
+        {console.log(storedata)}
         {
-            location.state.map((show,i)=>{
+            storedata.map((show,i)=>{
                
                 console.log("hhhh",process.env.REACT_APP_IMAGE_URL)
                 likedemo.push(blacki)

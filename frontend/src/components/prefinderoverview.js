@@ -1,6 +1,6 @@
 import { Images } from "../data/image"
 import red from "../resources/like/Fire Heart.svg"
-import black from "../resources/like/Favorite.svg"
+ 
 import { useState,useEffect } from "react"
 import "./prefinder.css"
 import close from "../resources/Close.svg"
@@ -113,15 +113,12 @@ function OverviewPrefinder(){
                 <div className="line" >
                     <div className="image">
                         <img  src={Images[index].img} alt="slide" />
-                        <div className="link" onClick={color1}><img src={link1} alt="change" /></div>
                     </div>
                     <div className="image">
                         <img  src={Images[index+1].img} alt="slide2" />
-                        <div className="link" onClick={color2}><img src={link2} alt="change2" /></div>
                     </div>
                     <div className="image">
                         <img src={Images[index+2].img} alt="slide3" />
-                        <div className="link" onClick={color3}><img src={link3} alt="change3" /></div>
                     </div>
                 </div>
                 <div id="next" onClick={indexChange}>
@@ -145,11 +142,9 @@ else if(currWidth>=719&&currWidth<=1033){
                 <div className="line" id="spaceBetweenImage" >
                     <div className="image" style={{width:"40vw"}}>
                         <img style={{objectFit:"fit"}}  src={Images[index].img} alt="slide" />
-                        <div className="link" onClick={color1}><img src={link1} alt="change" /></div>
                     </div>
                     <div className="image"  style={{width:"40vw"}}>
                         <img style={{objectFit:"fit"}}  src={Images[index+1].img} alt="slide2" />
-                        <div className="link" onClick={color2}><img src={link2} alt="change2" /></div>
                     </div>
                 </div>
                 <div id="next" onClick={indexChange}>
@@ -173,7 +168,6 @@ else {
                 <div className="line" id="spaceBetweenImage" >
                     <div className="image" style={{width:"60vw"}}>
                         <img style={{objectFit:"fit"}}  src={Images[index].img} alt="slide" />
-                        <div className="link" onClick={color1}><img src={link1} alt="change" /></div>
                     </div>
                 </div>
                 <div id="next" onClick={indexChange}>

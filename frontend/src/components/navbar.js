@@ -20,7 +20,7 @@ import LogoutButton from './logout';
 import { Link } from 'react-router-dom';
 
 // console.log(isAuthenticated)
-const pages = [{title:'Your closet',source:"/"},{title:'About us',source:'/about'},{title:'Contact us',source:'/contact'} ];
+const pages = [{title:'Wishlist',source:"/wishlist"},{title:'About us',source:'/about'},{title:'Contact us',source:'/contact'} ];
 
 
 
