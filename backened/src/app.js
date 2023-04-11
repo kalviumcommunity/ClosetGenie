@@ -3,6 +3,7 @@ require('dotenv').config()
 var cors = require('cors')
 require("./db/conn")
 const Match = require("./modules/match");
+
 const app=express()
 const port = process.env.PORT || 2000;
 app.use(cors())
@@ -54,7 +55,51 @@ app.get("/color",async(req,res)=>{
         console.log(e,"error in get of /color")
     }
 })
+app.post("/like",async(req,res)=>{
+    console.log(req.body)
+    let likedBody=req.body
+        const liked = await Match.findOneAndUpdate({_id:likedBody.productId }, {
+            
+            $addToSet:{likedUser:likedBody.userID}
+      });
+      res.status(201).send("sucesss"); 
+})
+app.post('/unlike',async(req,res)=>{
+    let likedBody=req.body
+   const unliked= await Match.findOneAndUpdate({_id:likedBody.productId },{
+    $pull: { likedUser: likedBody.userID  }
+   })
+   res.status(201).send("sucesss");     
+})
+app.get('/wishlist',async(req,res)=>{
+    let userEmail=req.query.email
+    let body=await Match.find({})
+    console.log(body)
+//    let ans= body.filter((e)=>{
+        
+//             return e.likedUser.length>0
+        
 
+//     })
+    // console.log(ans)
+    let wishlisted=body.filter((elt)=>{
+        let result= elt.likedUser.filter((likedUserEmail)=>{
+            
+                return LikedUserEmail===userEmail
+            
+        })
+        return result.length>0
+    })
+    res.send(wishlisted)
+})
+app.post('/delete',async(req,res)=>{
+    let Body=req.body
+    const deleted= await Match.findOneAndUpdate({_id:Body.productId },{
+     $pull: { likedUser: Body.userID  }
+    })
+    res.status(201).send("sucesss");     
+ 
+})
 
 app.listen(port,()=>{
     console.log(`connection is at ${port}`)

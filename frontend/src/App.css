@@ -368,11 +368,16 @@
   min-height: 100%;
   object-fit: cover;
 }
-#enddiv{
+.enddiv{
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
   width: 20%;
-  margin-top: 5%;
-  margin-bottom: 5%;
+   min-width: 206px;
+  margin-top: 10%;
+  margin-bottom: 10%;
   margin-left: 5%;
+  margin-right: 5%;
   font-family:'Libre Baskerville', serif;
   text-align: center;
   font-size: larger;

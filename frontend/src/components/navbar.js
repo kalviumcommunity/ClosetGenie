@@ -13,29 +13,33 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { useState, useEffect } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
+import CssBaseline from '@mui/material/CssBaseline';
 import LoginButton from './login';
 import LogoutButton from './logout';
 // import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
 
 // console.log(isAuthenticated)
-const pages = [{title:'Your closet',source:"/"},{title:'About us',source:'/about'},{title:'Contact us',source:'/contact'} ];
+const pages = [{title:'Wishlist',source:"/wishlist"},{title:'About us',source:'/about'},{title:'Contact us',source:'/contact'} ];
 
 
 
 function ResponsiveAppBar() {
   // const [size,updateSize]=React.useState("")
   const { isAuthenticated, user } = useAuth0();
-  // console.log(user.picture)
+  console.log(user)
   let settings
   let photo
+  let imageName
   if(!isAuthenticated){
     settings=[<LoginButton/>];
-    photo=<Avatar alt="Remy Sharp" src="/images/user.png" />;
+    photo="/images/user.png" ;
+    imageName="Guest"
   }
   else{
     settings = [`${user.name}`,'Dashboard', <LogoutButton/>];
-    photo= <img style={{width:"50px",borderRadius:"50px"}} src={user.picture} alt={user.name} />;
+    photo=`${user.picture} `;
+    imageName=`${user.name}`
   }
   console.log(isAuthenticated)
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -64,9 +68,11 @@ function ResponsiveAppBar() {
         }, []);
 
   return (
-    <AppBar position="static" style={{backgroundColor:"black",marginTop:"2%",paddingTop:"2%"
+    <AppBar position='relative' style={{backgroundColor:"black"
+    // ,marginTop:"2%",paddingTop:"2%"
     // ,display:"flex",justifyContent:"center"
     }}>
+      
       <Container style={{marginLeft:"0%",marginRight:"0%",width:"100%"}} 
       maxWidth="xxl"
       >
@@ -160,7 +166,7 @@ function ResponsiveAppBar() {
             <Tooltip title="Open settings">
               <Box onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 {/* {!isAuthenticated?<Avatar alt="Remy Sharp" src="/images/user.png" />:<img src={user.picture} alt={user.name} />} */}
-                {photo}
+                <Avatar alt={imageName} src={photo} />
                 
                 
               </Box>
@@ -190,7 +196,9 @@ function ResponsiveAppBar() {
           </Box>
         </Toolbar>
       </Container>
+      <CssBaseline />
     </AppBar>
+    
   );
 }
 export default ResponsiveAppBar;

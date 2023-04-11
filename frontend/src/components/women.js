@@ -29,16 +29,19 @@ function Women({    categoryWomen , updateWomen,flag,updateFlag,color,updatecolo
             },[categoryWomen])
 
         useEffect(()=>{
-            const baseURL2=`${process.env.REACT_APP_API_URL}/match?category=${categoryWomen}&colorFinal=${color.slice(1)}`
-            axios.get(baseURL2)
-            .then((res)=>{
-                if(!res.data||res.data.length===0)return
-                console.log("finsl result",res)
-                // setResult(res.data)
-                navigate("/outcome", { state: res.data })
+            if(categoryWomen&&color){
+                navigate("/outcome", { state:{category:categoryWomen,colorFinal:color} })
+            }
+        //     const baseURL2=`${process.env.REACT_APP_API_URL}/match?category=${categoryWomen}&colorFinal=${color.slice(1)}`
+        //     axios.get(baseURL2)
+        //     .then((res)=>{
+        //         if(!res.data||res.data.length===0)return
+        //         console.log("finsl result",res)
+        //         // setResult(res.data)
+               
                 
-            },[color])
-        })
+            },[])
+        // })
         //    console.log(favorableColor)
             return(
                 
