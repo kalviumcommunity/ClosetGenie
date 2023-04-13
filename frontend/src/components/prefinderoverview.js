@@ -11,7 +11,7 @@ function OverviewPrefinder(){
     // const [link2, setLink2] = useState(black)
     // const [link3, setLink3] = useState(black)
     const [index,updateIndex]=useState(0);
-    const { isAuthenticated} = useAuth0();
+    // const { isAuthenticated} = useAuth0();
     const [flag,updateFlag]=useState(false)
     
     useEffect(() => {

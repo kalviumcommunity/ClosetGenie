@@ -62,6 +62,7 @@ app.post("/like",async(req,res)=>{
             
             $addToSet:{likedUser:likedBody.userID}
       });
+      console.log(liked)
       res.status(201).send("sucesss"); 
 })
 app.post('/unlike',async(req,res)=>{
