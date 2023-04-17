@@ -11,13 +11,39 @@
     "image":"lightbrownCasualTrouserWhiteShirt.jpeg"
 },
 {
-    "input":"",
-    "inputColor":"",
-    "inputCode":"",
+    "input":"men's T-shirt",
+    "inputColor":"black",
+    "inputCode":"#000000",
+    "output":"Trouser casual",
+    "outputColor":"black",
+    "outputCode":"#000000",
+    "image":"blackTshirtBlackTrouserFormal.jpeg"
+},
+{
+    "input":"shirt casual",
+    "inputColor":"black",
+    "inputCode":"#000000",
+    "output":"Jeans",
+    "outputColor":"dark denim",
+    "outputCode":"#425d8c",
+    "image":"blackShirtdenimjeansmen.jpeg"
+},
+{
+    "input":"shirt casual",
+    "inputColor":"beige",
+    "inputCode":"#f9f6f3",
+    "output":"Trouser formal",
+    "outputColor":"olive",
+    "outputCode":"#33401c",
+    "image":"beigeshirtolivetraousercasual.jpeg"
+}
+{
+    "input":"shirt casual",
+    "inputColor":"brown",
+    "inputCode":"#3d2b24",
     "output":"",
     "outputColor":"",
     "outputCode":"",
     "image":""
-}
-  
+}  
 ]
