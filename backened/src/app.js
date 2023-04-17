@@ -62,6 +62,7 @@ app.post("/like",async(req,res)=>{
             
             $addToSet:{likedUser:likedBody.userID}
       });
+      console.log(liked)
       res.status(201).send("sucesss"); 
 })
 app.post('/unlike',async(req,res)=>{
@@ -85,7 +86,7 @@ app.get('/wishlist',async(req,res)=>{
     let wishlisted=body.filter((elt)=>{
         let result= elt.likedUser.filter((likedUserEmail)=>{
             
-                return LikedUserEmail===userEmail
+                return likedUserEmail===userEmail
             
         })
         return result.length>0

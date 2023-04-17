@@ -2,12 +2,15 @@ import { useLocation } from "react-router-dom";
 import Confetti from "react-confetti";
 import { useEffect,useState } from "react";
 import red from "../resources/like/Fire Heart.svg"
-import blacki from "../resources/like/black.svg"
+import blacki from "../resources/like/Favorite.svg"
 import "./end.css"
 import { useAuth0 } from '@auth0/auth0-react';
 import axios from "axios";
 import Navbar from"./navbar"
+import FramerMotion from "./framer-motion";
+
 // import { Result } from "./women";
+
 function End(){
     const location = useLocation()
     // console.log(black);
@@ -17,26 +20,26 @@ function End(){
     const { isAuthenticated, user } = useAuth0();
     const [storedata,updateStoredata]=useState([]);
     const[likedUser,updateLikedUser]=useState()
-    useEffect(()=>{
+    // useEffect(()=>{
         
-        storedata.map((show,i)=>{
-            if(show.likedUser){
-                var a=show.likedUser.find((e)=>{
-                    return e===user?.email
-                })
-            }
+    //     storedata.map((show,i)=>{
+    //         if(show.likedUser){
+    //             var a=show.likedUser.find((e)=>{
+    //                 return e===user?.email
+    //             })
+    //         }
            
-            if(a){
-                updateLike(prev=>{
-                    // console.log(prev)
-                    let newlike=[...prev]
-                    newlike[i]="red"
-                    return newlike
-            }
-                )
-        }
-        })
-      },[user])
+    //         if(a){
+    //             updateLike(prev=>{
+    //                 // console.log(prev)
+    //                 let newlike=[...prev]
+    //                 newlike[i]="red"
+    //                 return newlike
+    //         }
+    //             )
+    //     }
+    //     })
+    //   },[user])
 
       useEffect(()=>{
         
@@ -113,11 +116,13 @@ function End(){
     let likedemo=[];
     
     return(
+        <> <Navbar/>
+        <FramerMotion storeData={storedata} />
        <div id="end">
-        <Navbar/>
-        {showConfetti && <Confetti />}
+       
+       {showConfetti && <Confetti />}
         {console.log(storedata)}
-        {
+        {/* {
             storedata.map((show,i)=>{
                
                 console.log("hhhh",process.env.REACT_APP_IMAGE_URL)
@@ -128,7 +133,7 @@ function End(){
                     
                     <div  className="enddiv">
                         <div>{show.input}</div>
-                        <img id="imgend"  src={`${process.env.REACT_APP_IMAGE_URL}/images/${show.image}`} alt="image" />
+                        <img  className="imgend"  src={`${process.env.REACT_APP_IMAGE_URL}/images/${show.image}`} alt="image" />
                         <div>{show.output}</div>
                         <img id={show._id} style={{height:"7vh"}} src={like[i]==="red"?red:blacki} alt="like"   onClick={()=>store(i,show._id)}  ></img>
                        {show.likedUser.length}
@@ -137,8 +142,8 @@ function End(){
                 // console.log(show)
               
                 })
-            }
-                </div>
+            } */}
+                </div></>
         
     )
 }

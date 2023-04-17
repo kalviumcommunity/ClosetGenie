@@ -4,9 +4,11 @@ import { useEffect, useState } from "react";
 import Navbar from "./navbar";
 import "./wishlist.css";
 import Delete from '../resources/like/Delete.svg';
+import LoginButton from "./login";
 function Wishlist(){
     const [result,updateResult]=useState([])
     const{isAuthenticated,user}=useAuth0()
+    
     const deleteData=async(i,id)=>{
       await axios.post(`${process.env.REACT_APP_API_URL}/delete`,{
             productId:id,
@@ -34,30 +36,44 @@ function Wishlist(){
         )
     },[user])
     console.log(result,"kygybggffxw",user)
-    return(
-        <div id="wish">
-            <Navbar/>
-            
-            {result.map((e,i)=>{
-               { console.log(e)}
-               return(
-                <div className="wishdiv">
-                <div id="titleResult">{e.input}</div>
-                <img className="imgwish" src={`${process.env.REACT_APP_IMAGE_URL}/images/${e.image}`} alt="image" />
-                <div>{e.output}
-                <img id={e._id} style={{height:"7vh"}} src={Delete} alt="delete"  
-                 onClick={()=>deleteData(i,e._id)}
-                   ></img>               
-                </div>
+    if(isAuthenticated){
+        return(
+            <div id="wish">
+                <Navbar/>
+                
+                {result.map((e,i)=>{
+                   { console.log(e)}
+                   return(
+                    <div className="wishdiv">
+                    <div id="titleResult">{e.input}</div>
+                    <img className="imgwish" src={`${process.env.REACT_APP_IMAGE_URL}/images/${e.image}`} alt="image" />
+                    <div>{e.output}
+                    <img id={e._id} style={{height:"7vh"}} src={Delete} alt="delete"  
+                     onClick={()=>deleteData(i,e._id)}
+                       ></img>               
+                    </div>
+                   
+                    </div>
+                   )
+                   
+                })}
                
+                
+            </div>
+            )
+    }
+    else{
+        return(
+            <div  style={{height:"100vh",backgroundColor:"black"}} >
+                <Navbar/>
+                <div id="loginOuterDiv">
+                <div id="loginWarning">please login to see your wishlisted </div>
+                <LoginButton/>
                 </div>
-               )
-               
-            })}
-           
-            
-        </div>
+            </div>
         )
+    }
+   
 }
 
 export default Wishlist;

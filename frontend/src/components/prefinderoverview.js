@@ -7,11 +7,11 @@ import close from "../resources/Close.svg"
 import { useAuth0 } from "@auth0/auth0-react"
 import LoginButton from "./login"
 function OverviewPrefinder(){
-    const [link1, setLink1] = useState(black)
-    const [link2, setLink2] = useState(black)
-    const [link3, setLink3] = useState(black)
+    // const [link1, setLink1] = useState(black)
+    // const [link2, setLink2] = useState(black)
+    // const [link3, setLink3] = useState(black)
     const [index,updateIndex]=useState(0);
-    const { isAuthenticated} = useAuth0();
+    // const { isAuthenticated} = useAuth0();
     const [flag,updateFlag]=useState(false)
     
     useEffect(() => {
@@ -30,57 +30,51 @@ function OverviewPrefinder(){
 
     const indexChange=()=>{
         updateIndex(index=>index+1)
-        setLink1(black)
-        setLink2(black)
-        setLink3(black)
     }
     const revert=()=>{
         updateIndex(index=>index-1)
-        setLink1(black)
-        setLink2(black)
-        setLink3(black)
     }
-    const color1=()=> {
-        if(isAuthenticated){
-            if(link1===red){
-                setLink1(black)
-            }
-            else if(link1===black){
-                setLink1(red)
-            }
-        }
-        else{
-            updateFlag(true)
+//     const color1=()=> {
+//         if(isAuthenticated){
+//             if(link1===red){
+//                 setLink1(black)
+//             }
+//             else if(link1===black){
+//                 setLink1(red)
+//             }
+//         }
+//         else{
+//             updateFlag(true)
             
-        }
+//         }
      
-    }
-    const color2=()=> {
-        if(isAuthenticated){
-        if(link2===red){
-            setLink2(black)
-        }
-        else if(link2===black){
-            setLink2(red)
-        }
-    }
-    else{
-        updateFlag(true)
-    }
-}
-    const color3=()=> {
-        if(isAuthenticated){
-        if(link3===red){
-            setLink3(black)
-        }
-        else if(link3===black){
-            setLink3(red)
-        }
-    }
-    else{
-        updateFlag(true)
-    }
-}
+//     }
+//     const color2=()=> {
+//         if(isAuthenticated){
+//         if(link2===red){
+//             setLink2(black)
+//         }
+//         else if(link2===black){
+//             setLink2(red)
+//         }
+//     }
+//     else{
+//         updateFlag(true)
+//     }
+// }
+//     const color3=()=> {
+//         if(isAuthenticated){
+//         if(link3===red){
+//             setLink3(black)
+//         }
+//         else if(link3===black){
+//             setLink3(red)
+//         }
+//     }
+//     else{
+//         updateFlag(true)
+//     }
+// }
     if(currWidth>1033){
     return(
         <div id="pre">

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 .imgwish{
     max-width: 100%;
     min-width: 100%;
@@ -23,4 +25,27 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+  }
+  #loginWarning{
+    background-color: black;
+    color: white;
+    font-family:'Questrial', sans-serif;
+    justify-content: center;
+    font-size: x-large;
+    display: flex;
+    /* height: 100vh; */
+    align-items: center;
+  }
+  #loginOuterDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
+  }
+  #loginOuterDiv button{
+    background-color: white;
+    width: 20vw;
+    height: 7vh;
+    margin-top: 5%;
   }
