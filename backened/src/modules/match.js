@@ -3,7 +3,8 @@ const mongoose = require("mongoose");
 const matchingSchema = new mongoose.Schema({
     input:{
         type: String,
-        required: true
+        required: true,
+        index:true
     },
     inputColor:{
         type: String,
@@ -11,7 +12,8 @@ const matchingSchema = new mongoose.Schema({
     },
     inputCode:{
         type:String,
-        required:true
+        required:true,
+        index:true
     },
     output:{
         type: String,

@@ -1,0 +1,23 @@
+[
+
+
+{
+    "input":"shirt formal",
+    "inputColor":"White",
+    "inputCode":"#ffffff",
+    "output":"Trouser casual",
+    "outputColor":"light brown",
+    "outputCode":"#a08679",
+    "image":"lightbrownCasualTrouserWhiteShirt.jpeg"
+},
+{
+    "input":"",
+    "inputColor":"",
+    "inputCode":"",
+    "output":"",
+    "outputColor":"",
+    "outputCode":"",
+    "image":""
+}
+  
+]
