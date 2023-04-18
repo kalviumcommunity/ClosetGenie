@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom"
 import close from "../resources/Close.svg"
 import "./women.css"
 import {Ans }from "../data/outcome.js"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function Women({    categoryWomen , updateWomen,flag,updateFlag,color,updatecolor}){
     const navigate=useNavigate()
     
@@ -23,6 +25,9 @@ function Women({    categoryWomen , updateWomen,flag,updateFlag,color,updatecolo
                 updateColorAPI(response.data)
                 console.log(response.data)
             }).catch((e)=>{
+                toast.error("somthing went wrong!",{
+                    theme:"dark"
+                })
                 console.log(e,"error")
             })
             console.log({color})
@@ -46,6 +51,7 @@ function Women({    categoryWomen , updateWomen,flag,updateFlag,color,updatecolo
             return(
                 
                 <div style={{display: (flag===true?"flex":"none")}} id="outerModal">
+                    <ToastContainer />
                    <div id="innerModal">
                     <div id="colorflex">colors
                         <img onClick={()=>updateFlag(false)} width="40vw" src={close} alt=""/>
