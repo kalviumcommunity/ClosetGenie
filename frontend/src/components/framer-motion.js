@@ -31,21 +31,7 @@ function Card({ image, hueA, hueB,storeData,i}) {
     const [userMetadata, setUserMetadata] = useState(null);
     // const { isAuthenticated, user } = useAuth0();
 const background = `linear-gradient(306deg, ${hue(hueA)}, ${hue(hueB)})`;
-console.log(storeData)
-useEffect(async () => {
 
-    try {
-      
-      const accessToken = await getAccessTokenSilently({
-        authorizationParams: {
-          audience: process.env.REACT_APP_API_URL,
-        },
-      });
-      console.log(accessToken)
-    } catch (e) {
-      console.log(e);
-    }
-}, [getAccessTokenSilently, user?.sub]);
 // console.log(user)
 useEffect(()=>{
         
