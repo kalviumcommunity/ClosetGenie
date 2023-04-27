@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "./resources/a2.png"
-import Homenav from "./components/homenav";
 import { Link } from "react-router-dom";
 import ResponsiveAppBar from "./components/homenav";
 
@@ -24,10 +23,3 @@ function Home(){
     )
 }
 export default Home;
-
-//font-family: 'Libre Baskerville', serif;
-// @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
-//font-family: 'Questrial', sans-serif;
-//<style>
-//@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
-//</style>

@@ -21,8 +21,6 @@ app.post("/match",(req,res)=>{
 app.get("/match",async(req,res)=>{
     try{let queryFinal=req.query.category
         let queryFinal2=`#${req.query.colorFinal}`
-
-        // const matchData=await Match.find({ $or:[{input:queryFinal },{ output:queryFinal }]});
         const matchData=await Match.find({ $or: [ {  $and:[{input:queryFinal },{ inputCode:queryFinal2 }] }, { $and:[{output:queryFinal },{ outputCode:queryFinal2 }] } ] })
         res.send(matchData);
         
@@ -40,12 +38,10 @@ app.get("/color",async(req,res)=>{
         let colorOutput=colorData.map((data)=>{
            return queryValue==data.input?{colorName:data.inputColor,colorCode:data.inputCode}:{colorName:data.outputColor,colorCode:data.outputCode}
         })
-        // .distinct('inputColor');
         let result=[];
         colorOutput.forEach((elt)=>{
             let exist=result.find(a=>a.colorCode==elt.colorCode)
             if(!exist)result.push(elt)
-            
             // console.log(result);
         })
         res.send(result);
@@ -76,13 +72,6 @@ app.get('/wishlist',async(req,res)=>{
     let userEmail=req.query.email
     let body=await Match.find({})
     console.log(body)
-//    let ans= body.filter((e)=>{
-        
-//             return e.likedUser.length>0
-        
-
-//     })
-    // console.log(ans)
     let wishlisted=body.filter((elt)=>{
         let result= elt.likedUser.filter((likedUserEmail)=>{
             
