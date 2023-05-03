@@ -8,6 +8,7 @@ import "./women.css"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 function Women({ categoryWomen, updateWomen, flag, updateFlag, color, updatecolor }) {
+    const[womenCategory,updateWomenCategory]=useState([])
     const navigate = useNavigate()
     const ModalOpen = () => {
         const [colorAPI, updateColorAPI] = useState([])
@@ -55,6 +56,18 @@ function Women({ categoryWomen, updateWomen, flag, updateFlag, color, updatecolo
 
         )
     }
+    useEffect(()=>{
+        const CategoryURL=`${process.env.REACT_APP_API_URL}/men?gender=female`
+        // console.log(baseURL)
+        axios.get(CategoryURL)
+        .then((response)=>{
+           updateWomenCategory(response.data)
+            // console.log(response.data)
+        }).catch((e)=>{
+            console.log(e,"error")
+        })
+        // console.log({color})
+    },[])
     const updateCategory = (e) => {
         updateWomen(e.target.alt)
         updateFlag(true)
@@ -68,12 +81,12 @@ function Women({ categoryWomen, updateWomen, flag, updateFlag, color, updatecolo
     }
     return (
         <div id="womenCategory">
-            {WomenData.map((image) => {
+            {womenCategory.map((image) => {
                 // console.log(image.img)
                 return (
                     <div className="tops" onClick={updateCategory}>
                         {image.title}
-                        <img width="100vw" src={image.img} alt={image.title} />
+                        <img width="100vw" src={`${process.env.REACT_APP_IMAGE_URL}/images/category/${image.img}`} alt={image.title} />
                     </div>
                 )
             })}

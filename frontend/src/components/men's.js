@@ -3,9 +3,10 @@ import { useState ,useEffect} from "react";
 import axios from "axios";
 import close from "../resources/Close.svg"
 function Men({categoryWomen , updateWomen,flag,updateFlag,color,updatecolor}){ 
+    const[menCategory,updateMenCategory]=useState([])
     const ModalOpen=()=>{
         const[colorAPI,updateColorAPI]=useState([])
-           
+       
         useEffect(()=>{
             const baseURL=`${process.env.REACT_APP_API_URL}/color?input=${categoryWomen}`
             // console.log(baseURL)
@@ -39,6 +40,19 @@ function Men({categoryWomen , updateWomen,flag,updateFlag,color,updatecolor}){
                
             )
                 }
+                useEffect(()=>{
+                    const CategoryURL=`${process.env.REACT_APP_API_URL}/men?gender=male`
+                    // console.log(baseURL)
+                    axios.get(CategoryURL)
+                    .then((response)=>{
+                       updateMenCategory(response.data)
+                        // console.log(response.data)
+                    }).catch((e)=>{
+                        console.log(e,"error")
+                    })
+                    // console.log({color})
+                },[])
+        
     
 const updateCategory=(e)=>{
             updateWomen(e.target.alt)
@@ -53,12 +67,12 @@ const updateCategory=(e)=>{
              
     return(
         <div id="menCategory">
-            {MenData.map((image)=>{
+            {menCategory.map((image)=>{
                 // console.log(image.img)
                return(
                 <div className="tops" onClick={updateCategory}>
                    {image.title }
-                   <img width="100vw" src={image.img} alt={image.title}/>
+                   <img width="100vw" src={`${process.env.REACT_APP_IMAGE_URL}/images/category/men/${image.img}`} alt={image.title}/>
                 </div>
                )
               

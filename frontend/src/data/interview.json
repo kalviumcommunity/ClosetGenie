@@ -1,0 +1,67 @@
+[
+        {
+            "title":"Jeans",
+            "img": "menjean.jpg",
+            "gender":"male"
+        },
+        {
+            "title":"Trouser casual",
+            "img": "trouserscasual.jpg",
+            "gender":"male"
+    
+        },
+        
+        {
+            "title":"Trouser formal",
+            "img": "trousersformal.jpg",
+            "gender":"male"
+    
+        },
+        {
+            "title":"shorts",
+            "img": "menshort.jpg",
+            "gender":"male"
+        },
+        {
+            "title":"men's T-shirt",
+            "img": "men'stshirt.jpg",
+            "gender":"male"
+        },
+        {
+            "title":"shirt casual",
+            "img":"shirtcasual.jpg",
+            "gender":"male"
+        },
+        {
+            "title":"shirt formal",
+            "img": "shirtformal.jpg",
+            "gender":"male"
+        },
+         {
+            "title":"Sweatshirt",
+            "img": "mensweatshirt.jpg",
+            "gender":"male"
+        },
+         {
+            "title":"jacket",
+            "img": "menjacket.jpg",
+            "gender":"male"
+        },
+        {
+            "title":"blazer",
+            "img": "menblazer.jpg",
+            "gender":"male"
+
+        },
+        {
+            "title":"coat",
+            "img": "mencoat.jpg",
+            "gender":"male"
+        },
+        {
+            "title":"trackpant and jogger",
+            "img":"Sweatpants.jpg",
+            "gender":"male"
+        }
+    
+]

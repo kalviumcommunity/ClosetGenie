@@ -22,7 +22,7 @@ const cardVariants = {
   }
 };
 
-const hue = (h) => `hsl(${h}, 100%, 50%)`;
+const hue = (h) => `hsl(${h}, 0%, 100%)`;
 
 function Card({ image, hueA, hueB,storeData,i}) {
     // const[likedUser,updateLikedUser]=useState()
@@ -30,7 +30,7 @@ function Card({ image, hueA, hueB,storeData,i}) {
     const [like,updateLike]=useState([])
     const [userMetadata, setUserMetadata] = useState(null);
     // const { isAuthenticated, user } = useAuth0();
-const background = `linear-gradient(306deg, ${hue(hueA)}, ${hue(hueB)})`;
+const background = `linear-gradient(0deg, ${hue(hueA)}, ${hue(hueB)})`;
 
 // console.log(user)
 useEffect(()=>{
@@ -105,6 +105,6 @@ export default function FramerMotion({storeData}) {
     let max=360;
     // let min=0;
   return<div className="card-grp">{ storeData.map((data,i) => (
-    <Card storeData={storeData} i={i} image={`${process.env.REACT_APP_IMAGE_URL}/images/${data.image}`} hueA={Math.floor(Math.random() * (max+ 1))} hueB={Math.floor(Math.random() * (max+ 1))} key={data.image} />
+    <Card storeData={storeData} i={i} image={`${process.env.REACT_APP_IMAGE_URL}/images/${data.image}`} hueA={0} hueB={0} key={data.image} />
   ))}</div>
 }
