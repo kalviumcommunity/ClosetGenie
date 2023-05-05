@@ -1,45 +1,24 @@
 import { MenData } from "../data/menData";
 import { useState ,useEffect} from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom"
 import close from "../resources/Close.svg"
-import {Ans }from "../data/outcome.js"
-function Men({categoryWomen , updateWomen,flag,updateFlag,color,updatecolor}){
-    const navigate=useNavigate()
-    
-
+function Men({categoryWomen , updateWomen,flag,updateFlag,color,updatecolor}){ 
+    const[menCategory,updateMenCategory]=useState([])
     const ModalOpen=()=>{
         const[colorAPI,updateColorAPI]=useState([])
-           
+       
         useEffect(()=>{
             const baseURL=`${process.env.REACT_APP_API_URL}/color?input=${categoryWomen}`
-            console.log(baseURL)
+            // console.log(baseURL)
             axios.get(baseURL)
             .then((response)=>{
                 updateColorAPI(response.data)
-                console.log(response.data)
+                // console.log(response.data)
             }).catch((e)=>{
                 console.log(e,"error")
             })
-            console.log({color})
-            
-
-        
+            // console.log({color})
         },[categoryWomen])
-        // useEffect(()=>{
-        //     const baseURL2=`${process.env.REACT_APP_API_URL}/match?category=${categoryWomen}&colorFinal=${color.slice(1)}`
-        //     axios.get(baseURL2)
-        //     .then((res)=>{
-        //         if(!res.data||res.data.length===0)return
-        //         console.log("finsl result",res)
-        //         // setResult(res.data)
-        //         // navigate("/outcome", { state: res.data })
-                
-        //     },[color])
-        // }
-        // )
-
-        //    console.log(favorableColor)
             return(
                 
                 <div style={{display: (flag===true?"flex":"none")}} id="outerModal">
@@ -56,36 +35,44 @@ function Men({categoryWomen , updateWomen,flag,updateFlag,color,updatecolor}){
                  })}
                  
                  </div>
-                 
                 </div>
              </div>
                
             )
                 }
+                useEffect(()=>{
+                    const CategoryURL=`${process.env.REACT_APP_API_URL}/men?gender=male`
+                    // console.log(baseURL)
+                    axios.get(CategoryURL)
+                    .then((response)=>{
+                       updateMenCategory(response.data)
+                        // console.log(response.data)
+                    }).catch((e)=>{
+                        console.log(e,"error")
+                    })
+                    // console.log({color})
+                },[])
+        
     
 const updateCategory=(e)=>{
             updateWomen(e.target.alt)
             updateFlag(true)
-            // console.log(favorableArray)
-            // console.log(favorableColor)
-            return(
-                console.log(categoryWomen)
-                
-            )
+            // return(
+                // console.log(categoryWomen) 
+            // )
         }
         const colorchange=(e)=>{
             updatecolor(e.target.id)
         }
-       
-        
+             
     return(
         <div id="menCategory">
-            {MenData.map((image)=>{
+            {menCategory.map((image)=>{
                 // console.log(image.img)
                return(
                 <div className="tops" onClick={updateCategory}>
                    {image.title }
-                   <img width="100vw" src={image.img} alt={image.title}/>
+                   <img width="100vw" src={`${process.env.REACT_APP_IMAGE_URL}/images/category/men/${image.img}`} alt={image.title}/>
                 </div>
                )
               

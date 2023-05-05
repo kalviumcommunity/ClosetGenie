@@ -28,6 +28,7 @@ function Category(){
         }
       })
       
+      
     return(
         <div id="font">
            <div id="column">
@@ -44,7 +45,6 @@ function Category(){
                     </div>
                 </div>
                 <div id="small">
-                    {/* <img src={line} alt="line" />*/}
                     </div> 
                 <div id="righty">
                     <div id="women">Women's</div>

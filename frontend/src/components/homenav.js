@@ -36,10 +36,7 @@ function ResponsiveAppBar() {
   return (
     <AppBar sx={{backgroundColor:"black"}} position="static">
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
-          
-
+        <Toolbar disableGutters>         
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' },justifyContent:'end'}}>
             <IconButton
               size="large"
@@ -88,102 +85,9 @@ function ResponsiveAppBar() {
               </Button>
             ))}
           </Box>
-
-          {/* <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            {/* <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {/* {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))} */}
-            {/* </Menu> */}
-          {/* </Box> */} 
         </Toolbar>
       </Container>
     </AppBar>
   );
 }
 export default ResponsiveAppBar;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import { Link } from "react-router-dom";
-// import MenuIcon from '@mui/icons-material/Menu';
-// import LoginButton from "./login";
-// import LogoutButton from "./logout";
-// import React, { useState,useEffect} from "react";
-// // import {useAuth0 } from '@auth0/auth0-react';
-// function Homenav(){
-//     // let hamburger=React.createRef()
-//     // const [isAuthenticated] = useAuth0;
-//     const [currWidth,updatewidth]=useState(window.screen.width)
-//     useEffect(() => {
-//         const handleResize = () => {
-//           updatewidth(window.innerWidth);
-//         };
-//         window.addEventListener('resize', handleResize);
-//       }, []);
-//     //   if(currWidth<320){
-//     //     hamburger.style.display="none"
-//     // }
-//     const [count,incCount]=useState(0);
-    
-//    const Hamburger=()=>{
-   
-//     incCount(count=>count+1);
-        
-//     }
-// return(
-//     <div>
-//             <div id="space" style={{display: (currWidth<363&&count%2===0?"none":"flex"),flexDirection: (currWidth>363?"row":"column")}} >
-//                 <Link className="center2" to="/homeMain">Home</Link>
-//                 <Link className="center2" to="about">About us</Link>
-//                 <Link className="center2" to="contact">Contact us</Link>
-
-//                 {/* {isAuthenticated ?<LogoutButton/>:<LoginButton/>} */}
-//                 <LoginButton></LoginButton>
-//                 <div>{currWidth}</div>
-//             </div>
-//             <div id="hamburger" style={{display:currWidth>363?"none":"flex"}}>
-//                 <button onClick={Hamburger}><MenuIcon/></button>
-
-//             </div>
-//     </div>
-   
-// )
-// }
-// export default Homenav;

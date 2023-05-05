@@ -27,7 +27,7 @@ const pages = [{title:'Wishlist',source:"/wishlist"},{title:'About us',source:'/
 function ResponsiveAppBar() {
   // const [size,updateSize]=React.useState("")
   const { isAuthenticated, user } = useAuth0();
-  console.log(user)
+  // console.log(user)
   let settings
   let photo
   let imageName
@@ -37,11 +37,11 @@ function ResponsiveAppBar() {
     imageName="Guest"
   }
   else{
-    settings = [`${user.name}`,'Dashboard', <LogoutButton/>];
+    settings = [`${user.name}`,<LogoutButton/>];
     photo=`${user.picture} `;
     imageName=`${user.name}`
   }
-  console.log(isAuthenticated)
+  // console.log(isAuthenticated)
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -68,10 +68,7 @@ function ResponsiveAppBar() {
         }, []);
 
   return (
-    <AppBar position='relative' style={{backgroundColor:"black"
-    // ,marginTop:"2%",paddingTop:"2%"
-    // ,display:"flex",justifyContent:"center"
-    }}>
+    <AppBar position='relative' style={{backgroundColor:"black"}}>
       
       <Container style={{marginLeft:"0%",marginRight:"0%",width:"100%"}} 
       maxWidth="xxl"
@@ -132,7 +129,6 @@ function ResponsiveAppBar() {
             </Menu>
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} ><img src="https://closetgenie.netlify.app/a2.png" alt="logo" style={{height:50}} /></Box>
-          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
           <Typography
             variant="h5"
             noWrap
@@ -203,29 +199,3 @@ function ResponsiveAppBar() {
   );
 }
 export default ResponsiveAppBar;
-
-
-
-
-// import logo from "../resources/a1.png";
-// import { Link } from "react-router-dom";
-// import LoginButton from "./login";
-// import LogoutButton from "./logout";
-// import { useAuth0 } from "@auth0/auth0-react";
-// import './navbar.css'
-// function NavBar(){
-//     // const Authenticated = useAuth0().isAuthenticated;
-//     const {isAuthenticated}=useAuth0
-//             return(
-//                 <div id="flex">
-//                     <img height="95vh" src={logo} alt="logo" />
-//                     <Link className="center" to="/homeMain">Home</Link>
-//                     {console.log(isAuthenticated)}
-//                     {isAuthenticated?<LogoutButton/>:<LoginButton/>}
-//                     <Link className="center" to="/">Your Closet</Link>
-//                     <Link className="center" to="/about">About us</Link>
-//                     <Link className="center" to="/contact">Contact us</Link>
-//                 </div>
-//  )
-//  }
-//  export default NavBar;

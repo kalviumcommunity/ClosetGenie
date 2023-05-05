@@ -259,7 +259,7 @@
   margin-left: 20px;
   margin-right: 20px;
   /* height: 100vh; */
-  border-left: 3px dashed white;
+  border-left: 3px solid white;
 }
 
 .tops {
