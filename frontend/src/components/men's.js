@@ -1,4 +1,5 @@
 import { MenData } from "../data/menData";
+import {Vortex } from  'react-loader-spinner'
 import { useState ,useEffect} from "react";
 import axios from "axios";
 import close from "../resources/Close.svg"
@@ -65,7 +66,18 @@ const updateCategory=(e)=>{
             updatecolor(e.target.id)
         }
              
-    return(
+    return(menCategory.length===0?
+        <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
+                <Vortex
+                 visible={true}
+                 height="80"
+                 width="80"
+                 ariaLabel="vortex-loading"
+                 wrapperStyle={{}}
+                 wrapperClass="vortex-wrapper"
+                 colors={['white', 'white', 'white', 'white', 'white', 'white']}
+                 />
+        </div>:
         <div id="menCategory">
             {menCategory.map((image)=>{
                 // console.log(image.img)

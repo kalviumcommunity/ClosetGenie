@@ -5,6 +5,7 @@ import "./end.css"
 import axios from "axios";
 import Navbar from"./navbar"
 import FramerMotion from "./framer-motion";
+import { Hearts } from  'react-loader-spinner'
 
 function End(){
     const location = useLocation()
@@ -31,13 +32,33 @@ function End(){
     },[])
     
     return(
-        <> <Navbar/>
+        
+    //    {
+         storedata.length===0?
+            <> 
+                <Navbar/>
+                <div style={{backgroundColor:"black",height:"100vh",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                    <Hearts 
+                    height="80"
+                    width="80"
+                    color="#fff"
+                    ariaLabel="hearts-loading"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    visible={true}
+                />
+                </div>
+            </>:
+            <> 
+            <Navbar/>
         <FramerMotion storeData={storedata} />
        <div id="end">
        
        {showConfetti && <Confetti />}
         {console.log(storedata)}
-                </div></>
+                </div>
+</>
+    //    }
         
     )
 }
