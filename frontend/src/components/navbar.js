@@ -128,7 +128,7 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} ><img src="https://closetgenie.netlify.app/a2.png" alt="logo" style={{height:50}} /></Box>
+          <Link to="/homeMain"><Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} ><img src="https://closetgenie.netlify.app/a2.png" alt="logo" style={{height:50}} /></Box></Link>
           <Typography
             variant="h5"
             noWrap
