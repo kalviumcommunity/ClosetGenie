@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useAuth0 } from '@auth0/auth0-react';
 import axios from "axios";
+import { Hearts } from  'react-loader-spinner'
 
 const cardVariants = {
   offscreen: {
@@ -104,7 +105,7 @@ export default function FramerMotion({storeData}) {
 
     let max=360;
     // let min=0;
-  return<div className="card-grp">{ storeData.map((data,i) => (
+  return <div className="card-grp">{ storeData.map((data,i) => (
     <Card storeData={storeData} i={i} image={`${process.env.REACT_APP_IMAGE_URL}/images/${data.image}`} hueA={0} hueB={0} key={data.image} />
   ))}</div>
 }

@@ -1,5 +1,7 @@
-import { WomenData } from "../data/womenData"
+// import { WomenData } from "../data/womenData"
 import { useEffect, useState } from "react"
+import {Vortex } from  'react-loader-spinner'
+import { Hearts } from  'react-loader-spinner'
 // import { colors } from "../data/color"
 import axios from "axios";
 import { useNavigate } from "react-router-dom"
@@ -9,6 +11,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 function Women({ categoryWomen, updateWomen, flag, updateFlag, color, updatecolor }) {
     const[womenCategory,updateWomenCategory]=useState([])
+    const [loading,updateLoading]=useState(false)
     const navigate = useNavigate()
     const ModalOpen = () => {
         const [colorAPI, updateColorAPI] = useState([])
@@ -18,21 +21,29 @@ function Women({ categoryWomen, updateWomen, flag, updateFlag, color, updatecolo
             axios.get(baseURL)
                 .then((response) => {
                     updateColorAPI(response.data)
-                    console.log(response.data)
+                    // console.log(response.data)
                 }).catch((e) => {
                     toast.error("somthing went wrong!", {
                         // theme:"dark"
                     })
                     console.log(e, "error")
                 })
+                // .finally(()=>{
+                //     updateLoading(false)
+                //     console.log(loading,"jnjxjdxdb")
+                // })
             console.log({ color })
         }, [categoryWomen])
 
+            
+
         useEffect(() => {
+            
             if (categoryWomen && color) {
                 navigate("/outcome", { state: { category: categoryWomen, colorFinal: color } })
             }
         }, [])
+        
         return (
 
             <div style={{ display: (flag === true ? "flex" : "none") }} id="outerModal">
@@ -42,12 +53,23 @@ function Women({ categoryWomen, updateWomen, flag, updateFlag, color, updatecolo
                         <img onClick={() => updateFlag(false)} width="40vw" src={close} alt="" />
                     </div>
                     <div id="colorarrange">
-                        {colorAPI.map((color) => {
+                    {colorAPI.length===0?<div style={{marginTop:"20%"}}><Hearts 
+                                            height="80"
+                                            width="80"
+                                            color="#000000"
+                                            ariaLabel="hearts-loading"
+                                            wrapperStyle={{}}
+                                            wrapperClass=""
+                                            visible={true}
+                                        />
+                                        </div>:
+                                        colorAPI.map((color) => {
                             // console.log(color.)
                             return (
                                 <div className={`modalWidth ${color.colorCode}`} id={color.colorCode} onClick={colorchange} style={{ backgroundColor: color.colorCode }}></div>
                             )
                         })}
+                    
 
                     </div>
 
@@ -79,7 +101,21 @@ function Women({ categoryWomen, updateWomen, flag, updateFlag, color, updatecolo
     const colorchange = (e) => {
         updatecolor(e.target.id)
     }
+    
     return (
+        womenCategory.length===0?
+        <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
+                <Vortex
+                 visible={true}
+                 height="80"
+                 width="80"
+                 ariaLabel="vortex-loading"
+                 wrapperStyle={{}}
+                 wrapperClass="vortex-wrapper"
+                 colors={['white', 'white', 'white', 'white', 'white', 'white']}
+                 />
+        </div>:
+       
         <div id="womenCategory">
             {womenCategory.map((image) => {
                 // console.log(image.img)

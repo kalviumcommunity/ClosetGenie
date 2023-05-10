@@ -33,5 +33,5 @@ Progress Tracking
 |NodeJs REPL||[-](#)|
 |Using the public folder to serve files||[-](#)|
 |Postman Use for Testing||[-](#)|
-|Authentication||[-](#)|
-|Deployment||[-](#)|
+|Authentication|👍|[auth0](https://github.com/kalviumcommunity/ClosetGenie/pull/12)|
+|Deployment|👍|[Frontend](https://closetgenie.netlify.app/)|

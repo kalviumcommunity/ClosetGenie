@@ -1,0 +1,197 @@
+[{
+  "_id": {
+    "$oid": "644cfa4114751bdc1983a28f"
+  },
+  "title": "women's jeans",
+  "img": "women jeans.jpg",
+  "gender": "female"
+},{
+  "_id": {
+    "$oid": "644cfa4114751bdc1983a290"
+  },
+  "title": "women's trouser",
+  "img": "women trousers-1.jpg",
+  "gender": "female"
+},{
+  "_id": {
+    "$oid": "644cfa4114751bdc1983a291"
+  },
+  "title": "women's short",
+  "img": "women short.jpg",
+  "gender": "female"
+},{
+  "_id": {
+    "$oid": "644cfa4114751bdc1983a292"
+  },
+  "title": "women's T-shirt",
+  "img": "t-shirt.png",
+  "gender": "female"
+},{
+  "_id": {
+    "$oid": "644cfa4114751bdc1983a293"
+  },
+  "title": "women's tops",
+  "img": "top.jpg",
+  "gender": "female"
+},{
+  "_id": {
+    "$oid": "644cfa4114751bdc1983a294"
+  },
+  "title": "women's shirt",
+  "img": "shirt.jpg",
+  "gender": "female"
+},{
+  "_id": {
+    "$oid": "644cfa4114751bdc1983a295"
+  },
+  "title": "women's sweaters",
+  "img": "sweater.jpg",
+  "gender": "female"
+},{
+  "_id": {
+    "$oid": "644cfa4114751bdc1983a296"
+  },
+  "title": "shrugs",
+  "img": "shrug.png",
+  "gender": "female"
+},{
+  "_id": {
+    "$oid": "644cfa4114751bdc1983a297"
+  },
+  "title": "skirts",
+  "img": "skirt.jpg",
+  "gender": "female"
+},{
+  "_id": {
+    "$oid": "644cfa4114751bdc1983a298"
+  },
+  "title": "women's blazer",
+  "img": "blazer.jpg",
+  "gender": "female"
+},{
+  "_id": {
+    "$oid": "644cfa4114751bdc1983a299"
+  },
+  "title": "women's coat",
+  "img": "coat.jpg",
+  "gender": "female"
+},{
+  "_id": {
+    "$oid": "644cfa4114751bdc1983a29a"
+  },
+  "title": "women's jacket",
+  "img": "Jacket.jpg",
+  "gender": "female"
+},{
+  "_id": {
+    "$oid": "644cfa4114751bdc1983a29b"
+  },
+  "title": "sarees",
+  "img": "saree.jpg",
+  "gender": "female"
+},{
+  "_id": {
+    "$oid": "644cfa4114751bdc1983a29c"
+  },
+  "title": "plazzo",
+  "img": "plazzo.jpg",
+  "gender": "female"
+},{
+  "_id": {
+    "$oid": "644cfa4114751bdc1983a29d"
+  },
+  "title": "women's kurtas",
+  "img": "kurta.jpg",
+  "gender": "female"
+},{
+  "_id": {
+    "$oid": "644cfa4114751bdc1983a29e"
+  },
+  "title": "women's sweatshirts",
+  "img": "sweatshirt.jpg",
+  "gender": "female"
+},{
+  "_id": {
+    "$oid": "644d043e14751bdc1983a2ab"
+  },
+  "title": "Jeans",
+  "img": "menjean.jpg",
+  "gender": "male"
+},{
+  "_id": {
+    "$oid": "644d043e14751bdc1983a2ac"
+  },
+  "title": "Trouser casual",
+  "img": "trouserscasual.jpg",
+  "gender": "male"
+},{
+  "_id": {
+    "$oid": "644d043e14751bdc1983a2ad"
+  },
+  "title": "Trouser formal",
+  "img": "trousersformal.jpg",
+  "gender": "male"
+},{
+  "_id": {
+    "$oid": "644d043e14751bdc1983a2ae"
+  },
+  "title": "shorts",
+  "img": "menshort.jpg",
+  "gender": "male"
+},{
+  "_id": {
+    "$oid": "644d043e14751bdc1983a2af"
+  },
+  "title": "men's T-shirt",
+  "img": "men'stshirt.jpg",
+  "gender": "male"
+},{
+  "_id": {
+    "$oid": "644d043e14751bdc1983a2b0"
+  },
+  "title": "shirt casual",
+  "img": "shirtcasual.jpg",
+  "gender": "male"
+},{
+  "_id": {
+    "$oid": "644d043e14751bdc1983a2b1"
+  },
+  "title": "shirt formal",
+  "img": "shirtformal.jpg",
+  "gender": "male"
+},{
+  "_id": {
+    "$oid": "644d043e14751bdc1983a2b2"
+  },
+  "title": "Sweatshirt",
+  "img": "mensweatshirt.jpg",
+  "gender": "male"
+},{
+  "_id": {
+    "$oid": "644d043e14751bdc1983a2b3"
+  },
+  "title": "jacket",
+  "img": "menjacket.jpg",
+  "gender": "male"
+},{
+  "_id": {
+    "$oid": "644d043e14751bdc1983a2b4"
+  },
+  "title": "blazer",
+  "img": "menblazer.jpg",
+  "gender": "male"
+},{
+  "_id": {
+    "$oid": "644d043e14751bdc1983a2b5"
+  },
+  "title": "coat",
+  "img": "mencoat.jpg",
+  "gender": "male"
+},{
+  "_id": {
+    "$oid": "644d043e14751bdc1983a2b6"
+  },
+  "title": "trackpant and jogger",
+  "img": "Sweatpants.jpg",
+  "gender": "male"
+}]
