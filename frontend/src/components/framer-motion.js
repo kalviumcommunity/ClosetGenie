@@ -28,8 +28,8 @@ const hue = (h) => `hsl(${h}, 0%, 100%)`;
 function Card({ image, hueA, hueB,storeData,i}) {
     // const[likedUser,updateLikedUser]=useState()
     const { isAuthenticated, user , getAccessTokenSilently} = useAuth0();
-    const [like,updateLike]=useState([])
-    const [userMetadata, setUserMetadata] = useState(null);
+    const [like,updateLike]=useState([{}])
+    const [likeCount,updateLikeCount]=useState([])
     // const { isAuthenticated, user } = useAuth0();
 const background = `linear-gradient(0deg, ${hue(hueA)}, ${hue(hueB)})`;
 
@@ -39,7 +39,7 @@ useEffect(()=>{
     storeData.map((show,i)=>{
         if(show.likedUser){
             var likedObjectArray=show.likedUser.find((elt)=>{
-                return elt===user?.email
+                return (elt===user?.email)
             })
         }
        
@@ -47,16 +47,30 @@ useEffect(()=>{
             updateLike(prev=>{
                 // console.log(prev)
                 let newlike=[...prev]
-                newlike[i]="red"
+                newlike[i]={color:"red",count:show.likedUser.length}
                 return newlike
         }
             )
     }
+    else{
+      updateLike(prev=>{
+        // console.log(prev)
+        let newlike=[...prev]
+        newlike[i]={color:"black",count:show.likedUser.length}
+        return newlike
+}
+    )
+    }
     })
   },[user])
+  // useEffect(()=>{
+  //   storeData.map((show,i)=>{
+  //   updateLikeCount(likeCount[i]=show.likedUser.length)
+  //   })
+  // },[like])
 const store=(i,id)=>{
     console.log(i,id)
-    if(like[i]!=="red"){
+    if(like[i].color!=="red"){
        axios.post(`${process.env.REACT_APP_API_URL}/like`,{
           productId:id,
           userID:user.email
@@ -65,7 +79,7 @@ const store=(i,id)=>{
           updateLike(prev=>{
               
               let newlike=[...prev]
-              newlike[i]="red"
+              newlike[i]={color:"red",count:newlike[i].count+1}
               return newlike
                 
         })
@@ -78,7 +92,7 @@ const store=(i,id)=>{
       }).then(()=>{
           updateLike(prev=>{
               let newlike=[...prev]
-              newlike[i]="black"
+              newlike[i]={color:"black",count:newlike[i].count-1}
               return newlike
           })
       })
@@ -94,7 +108,11 @@ const store=(i,id)=>{
       <div className="splash" style={{ background }} />
       <motion.div className="card" variants={cardVariants}>
         <img style={{width:"95%",borderRadius:"20px",height:"95%",objectFit:"cover"}}src={image} alt="image"/>
-        <img id={storeData[i]._id} style={{height:"7vh",position:"absolute",right:"-20px",bottom:"20px"}} src={like[i]==="red"?red:blacki} alt="like"   onClick={()=>store(i,storeData[i]._id)}  ></img>
+        <img id={storeData[i]._id} style={{height:"7vh",position:"absolute",right:"-20px",bottom:"25px"}} src={like[i]?.color==="red"?red:blacki} alt="like"   onClick={()=>store(i,storeData[i]._id)}  ></img>
+        <div style={{height:"5vh",fontSize:"17px",position:"absolute",bottom:"6px",right:"3px",fontWeight:"bolder",backgroundColor: 'rgba(255, 0, 0, 0.7)',borderRadius:"2500px",width:"20px",height:"21px",textAlign:"center",color:"white"}}>
+          {like[i]?.count}
+          {/* {likeCount[i]} */}
+        </div>
       </motion.div>
     </motion.div>
   );

@@ -31,13 +31,13 @@ export default function ComboBox({ categoryWomen, updateWomen, flag, updateFlag 
       
       options={CategoryMenOrWomen}
       renderOption={
-        (props, option) => <Box component="li" key={option.label}  style={{ display: "flex"}} {...props}>
+        (props, option) => <Box component="li" key={option.label} placeholder='category'  style={{ display: "flex"}} {...props}>
           {console.log(option.label)}
           <div style={{ backgroundColor:(option.type==="M"?"#DFE9F5":"#eec4dc"),textAlign:"center",marginRight:"5%",width:"10%" }} >{option.type}</div>
           <div>{option.show}</div>
         </Box>}
       sx={{ width: 400 ,background:"white",borderRadius:"20px"}}
-      renderInput={(params) => <TextField {...params} label="category" />}
+      renderInput={(params) => <TextField {...params} label="category" placeholder='category'/>}
     />
   );
 }
