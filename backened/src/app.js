@@ -118,6 +118,10 @@ app.get('/men', async (req, res) => {
           res.status(500).json({ message: 'Server Error' });
         }
       });
+      app.get('/healthz',async(req,res)=>{
+        res.status(201).send("healthSucesss"); 
+      })
+
 app.listen(port,()=>{
     console.log(`connection is at ${port}`)
 })
