@@ -12,9 +12,17 @@ function End(){
     console.log(location.state,"input")
     const [showConfetti, setShowConfetti] = useState(false);
     const [storedata,updateStoredata]=useState([]);
+    let data;
+    if(location.state===null){
+         data=JSON.parse(sessionStorage.getItem("outputData"))
+    }
+    else{
+        sessionStorage.setItem("outputData",JSON.stringify(location.state))
+        data=location.state
+    }
       useEffect(()=>{
         
-        const baseURL2=`${process.env.REACT_APP_API_URL}/match?category=${location.state.category}&colorFinal=${location.state.colorFinal.slice(1)}`
+        const baseURL2=`${process.env.REACT_APP_API_URL}/match?category=${data.category}&colorFinal=${data.colorFinal.slice(1)}`
         axios.get(baseURL2)
         .then((res)=>{
             console.log("eeeeeeeeee")
@@ -22,7 +30,7 @@ function End(){
             updateStoredata(res.data)
             
         })
-    },[location.state.colorFinal])
+    },[data.colorFinal])
     useEffect(()=>{
         setShowConfetti(true);
        const timer= setTimeout(() => {

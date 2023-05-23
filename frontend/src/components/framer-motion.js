@@ -25,10 +25,11 @@ const cardVariants = {
 
 const hue = (h) => `hsl(${h}, 0%, 100%)`;
 
-function Card({ image, hueA, hueB, storeData, i }) {
+function Card({ image, hueA, hueB, storeData, i,flag,updateFlag }) {
   // const[likedUser,updateLikedUser]=useState()
   const { isAuthenticated, user, getAccessTokenSilently } = useAuth0();
   const [like, updateLike] = useState([{}])
+  
   // const [likeCount, updateLikeCount] = useState([])
   // const { isAuthenticated, user } = useAuth0();
   const background = `linear-gradient(0deg, ${hue(hueA)}, ${hue(hueB)})`;
@@ -101,7 +102,7 @@ function Card({ image, hueA, hueB, storeData, i }) {
     }
     else {
 
-
+updateFlag(true)
 
 
     }
@@ -129,18 +130,18 @@ function Card({ image, hueA, hueB, storeData, i }) {
 
 export default function FramerMotion({ storeData }) {
 
-
-  let max = 360;
+  const[flag,updateFlag]=useState(false)
+  // let max = 360;
   // let min=0;
   return (
     <div>
       <div className="card-grp">
         {storeData.map((data, i) => (
-          <Card storeData={storeData} i={i} image={`${process.env.REACT_APP_IMAGE_URL}/images/${data.image}`} hueA={0} hueB={0} key={data.image} />
+          <Card flag={flag} updateFlag={updateFlag} storeData={storeData} i={i} image={`${process.env.REACT_APP_IMAGE_URL}/images/${data.image}`} hueA={0} hueB={0} key={data.image} />
         ))}
       </div>
-      <div style={{ backgroundColor: "rgba(255, 255, 255, 0.621)",width: "100%",height: "100%",position: "fixed",zIndex: "1",left: "0",top: "0",display: "flex",justifyContent: "center",alignItems: "center",}} >
-        <div style={{}}>
+      <div style={{ backgroundColor: "rgba(255, 255, 255, 0.621)",width: "100%",height: "100%",position: "fixed",zIndex: "1",left: "0",top: "0",display: (flag === true ? "flex" : "none"),justifyContent: "center",alignItems: "center",}} >
+        <div>
           please login for liking
           <LoginButton/>
         </div>
