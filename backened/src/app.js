@@ -30,6 +30,17 @@ app.get("/match",async(req,res)=>{
         console.log(e,"error in get of /match")
     }
 })
+app.get("/prefinded",async(req,res)=>{
+    try{
+        const prefindedData=await Match.find()
+        res.json(prefindedData)
+        // res.send(matchData);
+        
+    }catch(e){
+        res.send(e)
+        console.log(e,"error in get of /match")
+    }
+})
 app.get("/color",async(req,res)=>{
     try{
         let queryValue=req.query.input

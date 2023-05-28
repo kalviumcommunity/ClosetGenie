@@ -108,8 +108,8 @@
   justify-content: right;
   align-items: flex-end;
   padding-right: 3%;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  /* padding-top: 2%; */
+  /* padding-bottom: 2%; */
 
 }
 
@@ -179,11 +179,12 @@
 }  */
 #font {
   color: white;
-  margin-top: 10%;
+  margin-top: 7%;
   padding-left: 4%;
   font-size: x-large;
 
 }
+
 
 #combo-box-demo {
   background-color: white;

@@ -8,8 +8,8 @@ function Main(){
     return(
         <div id="main">
          <NavBar/>
-         <Carousels />
-         <OverviewPrefinder />
+         {/* <Carousels /> */}
+         {/* <OverviewPrefinder /> */}
          <Category />
         </div>
     )
