@@ -1,3 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+  
+  #textStyle{
+    font-family: 'Libre Baskerville', serif;
+  }
+  #endLogin button{
+    height: 3.5vh;
+    font-size: large;
+    font-weight: bold;
+    font-family:'Questrial', sans-serif;
+    
+  }
+
+  
+
+  
+  #endLogin button {
+    background-color: #6c6c6c;
+    text-align: center;
+    border-radius: 100px;
+    box-shadow: rgba(0, 0, 0, .2) 0 -25px 18px -14px inset,rgba(0,0, 0, .15) 0 1px 2px,rgba(0, 0, 0, .15) 0 2px 4px,rgba(0, 0, 0, .15) 0 4px 8px,rgba(0, 0, 0, .15) 0 8px 16px,rgba(0, 0, 0, .15) 0 16px 32px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 2px 12px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  #endLogin button:hover {
+    box-shadow: rgba(0,0,0,.35) 0 -25px 18px -14px inset,rgba(0,0,0,.25) 0 1px 2px,rgba(0,0,0,.25) 0 2px 4px,rgba(0,0,0,.25) 0 4px 8px,rgba(0,0,0,.25) 0 8px 16px,rgba(0,0,0,.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+  }
+
+  /* #endLogin button{
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 30px;
+  padding: 0px 15px;
+  text-shadow: rgb(0 0 0 / 25%) 0px 3px 8px;
+  background: linear-gradient(92.88deg, rgb(69, 94, 181) 9.16%, rgb(86, 67, 204) 43.89%, rgb(103, 63, 215) 64.72%);
+  transition: all 0.5s ease 0s;
+  }
+  #endLogin:hover{
+      box-shadow: rgb(80 63 205 / 50%) 0px 1px 40px;
+      transition: all 0.1s ease 0s;
+  } */
+  
+
   .card {
     font-size: 164px;
     width: 300px;

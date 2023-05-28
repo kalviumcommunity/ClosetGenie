@@ -141,8 +141,8 @@ export default function FramerMotion({ storeData }) {
         ))}
       </div>
       <div style={{ backgroundColor: "rgba(255, 255, 255, 0.621)",width: "100%",height: "100%",position: "fixed",zIndex: "1",left: "0",top: "0",display: (flag === true ? "flex" : "none"),justifyContent: "center",alignItems: "center",}} >
-        <div>
-          please login for liking
+        <div id="endLogin" style={{display:"flex",flexDirection:"column"}}>
+          <div id="textStyle" style={{fontSize:"2rem"}}>Please login for liking</div>
           <LoginButton/>
         </div>
         </div>
